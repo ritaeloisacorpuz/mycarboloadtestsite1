@@ -191,3 +191,36 @@ a:hover {
     padding: 0 10px;
   }
 }
+/* ==========================================
+   ADDITIONAL BLOG PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Blog Video Hero Play Button */
+.play-button {
+  background-color: #263149;
+  color: #E5F7AF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Destination Cards Overlay Theming */
+.destination-card .overlay {
+  background: rgba(38, 49, 73, 0.45);
+}
+
+.destination-card h3 {
+  color: #E5F7AF;
+}
+
+/* Guide Card Caption Subtext Color */
+.guide-card p {
+  opacity: 0.8;
+}
+
+/* Blog Responsive Grid Adjustments */
+@media screen and (max-width: 768px) {
+  .destinations-grid, 
+  .guides-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
