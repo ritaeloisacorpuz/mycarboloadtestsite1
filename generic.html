@@ -10,10 +10,10 @@
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  
   <style>
     /* ==========================================
-       GENERIC PAGE LAYOUT & FONT SIZES
+       GENERIC PAGE LAYOUT & FONT SIZES ONLY
        ========================================== */
     .promos-page {
       width: 100%;
@@ -38,7 +38,7 @@
       line-height: 1.6;
     }
 
-    /* Cards Grid Section */
+    /* Cards Grid & Content Sections */
     .packages-grid-section, 
     .our-promos-text-section, 
     .promo-details-grid-section, 
@@ -72,6 +72,7 @@
       height: 220px;
       margin-bottom: 15px;
       border-radius: 4px;
+      display: block;
     }
 
     .package-card h3 {
@@ -84,14 +85,14 @@
       line-height: 1.4;
     }
 
-    /* Text Section */
+    /* Text Section Layout */
     .text-content p {
       margin-bottom: 16px;
       font-size: 0.95rem;
       line-height: 1.6;
     }
 
-    /* Details Grid Section */
+    /* Details Grid Section Layout */
     .details-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -124,7 +125,7 @@
       opacity: 0.8;
     }
 
-    /* Contact Form Section */
+    /* Contact Form Section Layout */
     .bottom-contact-section h2 {
       font-size: 2.2rem;
       margin-bottom: 10px;
@@ -133,6 +134,7 @@
     .contact-sub {
       font-size: 0.9rem;
       margin-bottom: 25px;
+      text-align: center;
     }
 
     .social-icons {
@@ -163,6 +165,7 @@
     .form-group label {
       font-size: 0.85rem;
       margin-bottom: 6px;
+      text-align: left;
     }
 
     .form-group input, 
@@ -170,6 +173,13 @@
       padding: 10px;
       font-size: 0.9rem;
       border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea.form-control {
+      height: 120px;
+      resize: vertical;
     }
 
     .form-actions {
@@ -188,6 +198,12 @@
       .form-columns {
         grid-template-columns: 1fr;
       }
+      .packages-grid-section, 
+      .our-promos-text-section, 
+      .promo-details-grid-section, 
+      .bottom-contact-section {
+        padding: 40px 5%;
+      }
     }
   </style>
 </head>
@@ -202,7 +218,7 @@
     <!-- Hero Section -->
     <section class="hero-section dark-bg">
       <div class="hero-container">
-        <h1>Promos & Packages</h1>
+        <h1>Promos &amp; Packages</h1>
         <p class="hero-subtext">
           We have something for everyone --- for the MODern mom caring for her family, the ambitious bachelor building his fortune, the senior citizen enjoying her retirement and the busy expat with goals to hit in the Philippines.
         </p>
@@ -212,7 +228,7 @@
     <!-- Promos Overview Cards Grid -->
     <section class="packages-grid-section">
       <div class="container">
-        <h2 class="section-title">Promos & Packages</h2>
+        <h2 class="section-title">Promos &amp; Packages</h2>
         <div class="cards-grid">
           <div class="package-card">
             <div class="card-img-wrapper">
@@ -296,4 +312,63 @@
           <div class="detail-item">
             <div class="icon-box"><i class="fa-solid fa-heart"></i></div>
             <h3>Gift of Love</h3>
-            <p>Get 10
+            <p>Get 10% discount on Gift Certificates purchased for family and loved ones on special occasions.</p>
+            <p class="disclaimer">Applicable for minimum GC purchases of Php 2,000.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="bottom-contact-section dark-bg">
+      <div class="container">
+        <h2>Inquire About Our Promos</h2>
+        <p class="contact-sub">Have questions about our packages? Send us a message below.</p>
+        
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-viber"></i></a>
+        </div>
+
+        <form action="https://contactformhandler.rita-eloisa-corpuz.workers.dev" method="POST" class="main-contact-form">
+          <!-- Cloudflare Email Recipient Target -->
+          <input type="hidden" name="_to" value="rita.eloisa.corpuz@student.ateneo.edu">
+
+          <div class="form-columns">
+            <div class="form-group">
+              <label for="full_name">Full Name *</label>
+              <input type="text" id="full_name" name="full_name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="contact_email">Email Address *</label>
+              <input type="email" id="contact_email" name="email" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="promo_interest">Promo or Package Interested In</label>
+            <input type="text" id="promo_interest" name="promo_interest" class="form-control" placeholder="e.g. MODern Mom Package">
+          </div>
+
+          <div class="form-group">
+            <label for="inquiry_message">Message</label>
+            <textarea id="inquiry_message" name="message" class="form-control"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-send">Send Inquiry</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 3. Footer Placeholder at the very bottom right before </body> -->
+  <div id="footer-placeholder"></div>
+
+  <!-- 4. Loader script directly underneath footer placeholder -->
+  <script src="include.js"></script>
+</body>
+</html>
