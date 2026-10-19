@@ -269,3 +269,40 @@ a:hover {
 .dark-bg .btn-send:hover {
   opacity: 0.9;
 }
+/* ==========================================
+   ADDITIONAL BOOKING / ORDER FORM THEMING
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Light Cream Background for Form Card */
+.form-card-bg {
+  background-color: #FFFEE6;
+  color: #263149;
+  box-shadow: 0 4px 15px rgba(38, 49, 73, 0.08);
+}
+
+/* Line Form Input Focus States */
+.form-control-line {
+  color: #263149;
+}
+
+.form-control-line:focus {
+  border-bottom-color: #263149;
+}
+
+/* Submit Pill Button Theming */
+.btn-submit-pill {
+  background-color: transparent;
+  color: #263149;
+  transition: all 0.2s ease;
+}
+
+.btn-submit-pill:hover {
+  background-color: #263149;
+  color: #E5F7AF;
+}
+
+/* Instructions Dividers & Images */
+.step-item {
+  border-bottom: 1px solid rgba(38, 49, 73, 0.15);
+}
