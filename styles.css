@@ -224,3 +224,48 @@ a:hover {
     grid-template-columns: 1fr !important;
   }
 }
+/* ==========================================
+   ADDITIONAL GENERIC PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Generic Card & Package Border Styling */
+.package-card {
+  background-color: transparent;
+}
+
+/* Icon Box Color Theming */
+.promo-details-grid-section .icon-box {
+  color: #263149;
+}
+
+/* Social Icons Links Styling */
+.social-icons a {
+  color: #E5F7AF;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover {
+  opacity: 0.75;
+}
+
+/* Dark Section Form Controls Theming Override */
+.dark-bg .form-control {
+  background-color: #FFFFFF;
+  color: #263149;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-bg .form-control:focus {
+  border-color: #E5F7AF;
+  box-shadow: 0 0 0 2px rgba(229, 247, 175, 0.3);
+}
+
+.dark-bg .btn-send {
+  background-color: #E5F7AF;
+  color: #263149;
+}
+
+.dark-bg .btn-send:hover {
+  opacity: 0.9;
+}
