@@ -11,12 +11,12 @@
 /* Base Body Styling & Theme Colors */
 body {
   font-family: 'Helvetica', Arial, sans-serif;
-  background-color: #E5F7AF;
-  color: #263149;
+  background-color: #E5F7AF; /* Lemon Green */
+  color: #263149;           /* Dark Shade */
   line-height: 1.5;
 }
 
-/* Default Alignments requested */
+/* Default Alignments */
 p {
   text-align: justify;
 }
@@ -30,14 +30,14 @@ img {
   object-fit: cover;
 }
 
-/* Buttons, Links, Accent Styling */
+/* Buttons, Links, & Interactive Element Styling */
 a {
   color: #263149;
   text-decoration: none;
 }
 
 a:hover {
-  color: #FCF87C;
+  opacity: 0.75;
 }
 
 .button, button {
@@ -45,19 +45,25 @@ a:hover {
   color: #E5F7AF;
   border: none;
   cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
 .button:hover, button:hover {
-  background-color: #FCF87C;
-  color: #263149;
+  opacity: 0.85;
 }
 
-.accent-bg {
-  background-color: #FCF87C;
+/* Utility Theme Classes */
+.lemon-bg {
+  background-color: #E5F7AF;
+  color: #263149;
 }
 
 .dark-bg {
   background-color: #263149;
+  color: #E5F7AF;
+}
+
+.dark-bg a {
   color: #E5F7AF;
 }
 
