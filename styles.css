@@ -1,193 +1,33 @@
 /* ==========================================
-   GLOBAL RESET & THEMING (styles.css)
-   ========================================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Base Body Styling & Theme Colors */
-body {
-  font-family: 'Helvetica', Arial, sans-serif;
-  background-color: #E5F7AF; /* Lemon Green */
-  color: #263149;           /* Dark Shade */
-  line-height: 1.5;
-}
-
-/* Default Alignments */
-p {
-  text-align: justify;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-}
-
-img {
-  object-position: center top;
-  object-fit: cover;
-}
-
-/* Buttons, Links, & Interactive Element Styling */
-a {
-  color: #263149;
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.75;
-}
-
-.button, button {
-  background-color: #263149;
-  color: #E5F7AF;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.button:hover, button:hover {
-  opacity: 0.85;
-}
-
-/* Utility Theme Classes */
-.lemon-bg {
-  background-color: #E5F7AF;
-  color: #263149;
-}
-
-.dark-bg {
-  background-color: #263149;
-  color: #E5F7AF;
-}
-
-.dark-bg a {
-  color: #E5F7AF;
-}
-
-/* ==========================================
-   GLOBAL RESPONSIVENESS (All Gadgets)
-   ========================================== */
-
-@media screen and (max-width: 1024px) {
-  /* iPad / Tablet layout adjustments */
-  .destinations-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* Mobile Phone & Kindle portrait adjustments */
-  .site-header {
-    flex-direction: column !important;
-  }
-  .main-nav ul {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  .features-bar {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  .destinations-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-/* ==========================================
-   ADDITIONAL COMPONENT THEMING (styles.css)
-   ========================================== */
-
-/* Input Controls & Textareas */
-.form-control {
-  background-color: #ffffff;
-  color: #263149;
-  border: 1px solid rgba(38, 49, 73, 0.25);
-  font-family: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.form-control:focus {
-  outline: none;
-  border-color: #263149;
-  box-shadow: 0 0 0 2px rgba(38, 49, 73, 0.15);
-}
-
-/* Icons, Cards & Decorative Elements */
-.icon-box {
-  color: #263149;
-}
-
-.faq-item {
-  border-bottom: 1px solid rgba(38, 49, 73, 0.2);
-}
-
-.read-more {
-  color: #263149;
-  text-decoration: none;
-}
-
-.read-more:hover {
-  opacity: 0.75;
-}
-
-/* Button & Link Hover Effects */
-.btn-pill, 
-.btn-send, 
-.btn-submit-main, 
-.btn-submit-secondary, 
-.btn-upload-teal {
-  background-color: #263149;
-  color: #E5F7AF;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.btn-pill:hover, 
-.btn-send:hover, 
-.btn-submit-main:hover, 
-.btn-submit-secondary:hover, 
-.btn-upload-teal:hover {
-  opacity: 0.85;
-}
-/* ==========================================
-   ADDITIONAL PAYMENT PAGE THEMING & CONTROLS
+   ADDITIONAL BLOG PAGE THEMING & CONTROLS
    (Paste at bottom of existing styles.css)
    ========================================== */
 
-/* Form Control Theming */
-.form-control {
-  background-color: #FFFFFF;
-  color: #263149;
-  border: 1px solid rgba(38, 49, 73, 0.3);
-}
-
-.form-control:focus {
-  outline: none;
-  border-color: #263149;
-}
-
-/* Section & Step Dividers Theming */
-.section-divider {
-  background: rgba(38, 49, 73, 0.15);
-}
-
-.step-block {
-  border-bottom: 1px solid rgba(38, 49, 73, 0.15);
-}
-
-/* Upload Button Styling Override */
-.btn-upload-teal {
+/* Blog Video Hero Play Button */
+.play-button {
   background-color: #263149;
+  color: #E5F7AF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Destination Cards Overlay Theming */
+.destination-card .overlay {
+  background: rgba(38, 49, 73, 0.45);
+}
+
+.destination-card h3 {
   color: #E5F7AF;
 }
 
-/* Payment Form Responsiveness Adjustments */
+/* Guide Card Caption Subtext Color */
+.guide-card p {
+  opacity: 0.8;
+}
+
+/* Blog Responsive Grid Adjustments */
 @media screen and (max-width: 768px) {
-  .order-form-wrapper {
-    width: 100%;
-    padding: 0 10px;
+  .destinations-grid, 
+  .guides-grid {
+    grid-template-columns: 1fr !important;
   }
 }
