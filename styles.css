@@ -270,39 +270,43 @@ a:hover {
   opacity: 0.9;
 }
 /* ==========================================
-   ADDITIONAL BOOKING / ORDER FORM THEMING
-   (Paste at bottom of existing styles.css)
+   ORDER / BOOKING PAGE THEMING (styles.css)
    ========================================== */
 
-/* Light Cream Background for Form Card */
+/* Booking Card Background & Shadow */
 .form-card-bg {
-  background-color: #FFFEE6;
+  background-color: #ffffff;
   color: #263149;
-  box-shadow: 0 4px 15px rgba(38, 49, 73, 0.08);
+  border: 1px solid rgba(38, 49, 73, 0.15);
+  box-shadow: 0 4px 20px rgba(38, 49, 73, 0.08);
 }
 
-/* Line Form Input Focus States */
+/* Underline Form Fields Line Color */
 .form-control-line {
+  border-bottom: 1.5px solid #263149;
   color: #263149;
 }
 
 .form-control-line:focus {
   border-bottom-color: #263149;
+  box-shadow: 0 2px 0 0 rgba(38, 49, 73, 0.2);
 }
 
-/* Submit Pill Button Theming */
+/* Form Submit Button Theme */
 .btn-submit-pill {
-  background-color: transparent;
-  color: #263149;
-  transition: all 0.2s ease;
+  background-color: #263149;
+  color: #E5F7AF;
+  border: 1.5px solid #263149;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
 .btn-submit-pill:hover {
-  background-color: #263149;
-  color: #E5F7AF;
+  background-color: #E5F7AF;
+  color: #263149;
+  opacity: 0.9;
 }
 
-/* Instructions Dividers & Images */
+/* Instruction Step Divider Line Theme */
 .step-item {
-  border-bottom: 1px solid rgba(38, 49, 73, 0.15);
+  border-bottom: 1px solid rgba(38, 49, 73, 0.2);
 }
