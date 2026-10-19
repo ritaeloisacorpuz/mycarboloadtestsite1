@@ -1,0 +1,65 @@
+<header class="site-header">
+  <style>
+    /* Header Layout & Font Sizes (Skeletal Bones) */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      width: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-img {
+      max-height: 55px;
+      width: auto;
+      display: block;
+    }
+    .main-nav {
+      margin: 0 auto;
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+    }
+    .main-nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+    
+    /* Mobile Layout Overrides for Header */
+    @media screen and (max-width: 768px) {
+      .site-header {
+        padding: 20px 15px;
+      }
+      .main-nav ul {
+        gap: 12px;
+      }
+      .main-nav a {
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+    }
+  </style>
+
+  <div class="logo-container">
+    <img src="g-logo-bluepages.png" alt="Logo" class="logo-img">
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">The Blue Pages Home</a></li>
+      <li><a href="directory.html">The Blue Pages Talent Directory</a></li>
+      <li><a href="request.html">The Blue Pages Request Form</a></li>
+      <li><a href="about.html">About The Blue Pages</a></li>
+      <li><a href="https://www.maid-on-demand.com/blue-pages-create-profile">Create Your Blue Pages Profile</a></li>
+    </ul>
+  </nav>
+</header>
