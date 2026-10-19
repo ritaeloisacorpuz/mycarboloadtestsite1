@@ -152,3 +152,42 @@ a:hover {
 .btn-upload-teal:hover {
   opacity: 0.85;
 }
+/* ==========================================
+   ADDITIONAL PAYMENT PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Form Control Theming */
+.form-control {
+  background-color: #FFFFFF;
+  color: #263149;
+  border: 1px solid rgba(38, 49, 73, 0.3);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #263149;
+}
+
+/* Section & Step Dividers Theming */
+.section-divider {
+  background: rgba(38, 49, 73, 0.15);
+}
+
+.step-block {
+  border-bottom: 1px solid rgba(38, 49, 73, 0.15);
+}
+
+/* Upload Button Styling Override */
+.btn-upload-teal {
+  background-color: #263149;
+  color: #E5F7AF;
+}
+
+/* Payment Form Responsiveness Adjustments */
+@media screen and (max-width: 768px) {
+  .order-form-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
