@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - CarboLoad</title>
+  
+  <!-- 1. Link external stylesheet inside <head> -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ==========================================
+       BLOG PAGE LAYOUT & FONT SIZES
+       ========================================== */
+    .articles-section {
+      padding: 60px 8%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .articles-header {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .articles-header h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .articles-header p {
+      font-size: 0.95rem;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px 40px;
+    }
+
+    .article-card img {
+      width: 100%;
+      height: 320px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .article-card h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .article-card p {
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .read-more {
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .center-btn-container {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .btn-pill {
+      padding: 12px 32px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 80px 8%;
+    }
+
+    .faq-header {
+      margin-bottom: 50px;
+    }
+
+    .faq-header h2 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .faq-header p {
+      font-size: 0.9rem;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      padding: 24px 0;
+    }
+
+    .faq-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .faq-title span {
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+
+    .faq-content {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 2. Header Placeholder at the very top inside <body> -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN ARTICLES / BLOG SECTION -->
+  <section class="articles-section">
+    <div class="articles-header">
+      <h1>Excepteur sint occaecat cupidatat non proident</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+
+    <div class="articles-grid">
+      <article class="article-card">
+        <img src="https://picsum.photos/600/400?random=10" alt="Island landscape">
+        <h2>Understand your customers</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#" class="read-more">Read more &rsaquo;</a>
+      </article>
+
+      <article class="article-card">
+        <img src="https://picsum.photos/600/400?random=11" alt="Rooftop pool">
+        <h2>Understand your customers</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="read-more">Read more &rsaquo;</a>
+      </article>
+
+      <article class="article-card">
+        <img src="https://picsum.photos/600/400?random=12" alt="Picnic table outdoors">
+        <h2>Understand your customers</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#" class="read-more">Read more &rsaquo;</a>
+      </article>
+
+      <article class="article-card">
+        <img src="https://picsum.photos/600/400?random=13" alt="Waterfall landscape">
+        <h2>Understand your customers</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="read-more">Read more &rsaquo;</a>
+      </article>
+    </div>
+
+    <div class="center-btn-container">
+      <button class="button btn-pill">Read all articles</button>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section dark-bg">
+    <div class="faq-header">
+      <h2>Frequently asked questions</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-title">
+          Lorem ipsum dolor sit ametetur elit?
+          <span>&minus;</span>
+        </div>
+        <div class="faq-content">
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-title">
+          Excepteur sint occaecat cupidatat non sunt in culpa qui officia deserunt mollit anim id est laborum?
+          <span>&minus;</span>
+        </div>
+        <div class="faq-content">
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-title">
+          Tempor incididunt ut labore et dolore magna aliquat enim ad minim?
+          <span>&minus;</span>
+        </div>
+        <div class="faq-content">
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Footer Placeholder at the very bottom right before </body> -->
+  <div id="footer-placeholder"></div>
+
+  <!-- 4. Loader script directly underneath footer placeholder -->
+  <script src="include.js"></script>
+</body>
+</html>
