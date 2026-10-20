@@ -356,36 +356,45 @@ footer.site-footer a:hover {
 footer.site-footer hr.footer-divider {
   border-top: 1px solid rgba(229, 247, 175, 0.25) !important;
 }
-/* Mobile menu wrap styling */
-@media screen and (max-width: 768px) {
-  /* Target your menu container (ul, nav, or flex wrapper) */
-  .nav-menu,
+/* Force horizontal wrapping menu layout on mobile */
+@media screen and (max-width: 991px) {
+  /* Target common header/navigation container selectors */
+  header nav,
   header nav ul,
-  footer nav ul {
-    display: flex;
-    flex-direction: row;       /* Keep items side-by-side */
-    flex-wrap: wrap;           /* Allow items to break into multiple rows */
-    justify-content: center;   /* Center the items horizontally */
-    align-items: center;
-    gap: 12px 18px;            /* Row gap and item gap */
-    padding: 15px 20px;
-    margin: 0;
-    list-style: none;
-    text-align: center;
+  header .menu,
+  header .nav,
+  header .nav-menu,
+  .site-header nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px 16px !important;
+    width: 100% !important;
+    padding: 10px 15px !important;
+    margin: 0 auto !important;
   }
 
-  /* Ensure individual links/items don't take up 100% width */
-  .nav-menu li,
+  /* Force menu items to shrink-wrap their content */
+  header nav li,
   header nav ul li,
-  footer nav ul li {
-    width: auto;
-    display: inline-block;
+  header .menu li,
+  header .nav-menu li {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 1 auto !important;
+    margin: 0 !important;
   }
 
-  .nav-menu a,
+  /* Prevent link text from wrapping onto two lines individually */
+  header nav a,
   header nav ul li a,
-  footer nav ul li a {
-    white-space: nowrap;       /* Keeps individual link text like "Affiliate Program" on one line */
-    font-size: 14px;
+  header .menu a,
+  header .nav-menu a {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    width: auto !important;
   }
 }
