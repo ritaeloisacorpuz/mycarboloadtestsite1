@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Profile</title>
+  
+  <!-- Link external stylesheet for look, feel, color themes, font types, and general responsiveness -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ============================================================
+       STRUCTURAL & LAYOUT CSS (Bones of the Career Page)
+       Strictly contains layout, dimensions, spacing, positioning,
+       and font sizes. No font families, colors, or color themes.
+       ============================================================ */
+
+    /* Default Alignments requested */
+    p {
+      text-align: justify;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+    img {
+      object-position: center top;
+      object-fit: cover;
+    }
+
+    /* Container Spacing */
+    .career-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .section-wrapper {
+      padding: 50px 30px;
+      margin-bottom: 40px;
+      border-radius: 12px;
+    }
+
+    /* --- SECTION 1: ABOUT / HERO SECTION --- */
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about-image-container {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .about-image-container img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .about-content h1 {
+      font-size: 2.5rem;
+      text-align: left;
+    }
+
+    .about-content p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .about-buttons-wrapper {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .btn-action {
+      padding: 10px 24px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    /* --- SECTION 2: CAREER SUMMARY --- */
+    .summary-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+    }
+
+    .summary-section p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+    }
+
+    .summary-btn-wrapper {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* --- SECTION 3: PROFESSIONAL EXPERIENCE --- */
+    .experience-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    .job-meta h3 {
+      font-size: 1rem;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .job-meta p {
+      font-size: 0.9rem;
+      text-align: left;
+      margin-bottom: 4px;
+    }
+
+    .job-meta .job-dates {
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+
+    .job-details ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .job-details li {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+
+    .experience-footer-link {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    /* --- SECTION 4: RECOMMENDATION LETTERS --- */
+    .recommendations-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-divider-line {
+      width: 40px;
+      height: 2px;
+      margin: 0 auto 40px auto;
+    }
+
+    .recommendations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .recommender-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .recommender-avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .recommender-avatar img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .recommender-card h3 {
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .recommender-card p {
+      font-size: 0.85rem;
+      text-align: center;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .recommender-card a {
+      font-size: 0.8rem;
+      text-decoration: underline;
+    }
+
+    /* Layout Responsive Rules for standard structural breaks */
+    @media screen and (max-width: 850px) {
+      .about-hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .experience-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .recommendations-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Structural Rule 2: Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <main class="career-container">
+
+    <!-- Section 1: About Inigo -->
+    <section class="section-wrapper career-hero-card">
+      <div class="about-hero-grid">
+        <div class="about-image-container">
+          <img src="inigo-grad.jpg" alt="Inigo Graduation Photo">
+        </div>
+        <div class="about-content">
+          <h1>About Inigo</h1>
+          <p>Iñigo completed his primary and secondary school at La Salle Green Hills (LSGH) and earned a Bachelor's Degree in International Studies with a Major in Japanese Studies from De La Salle University, Manila (DLSU-M).</p>
+          <p>He looks forward to establishing a career in the financial services industry or a related industry that nurtures his interest in numbers. He also sees himself possibly building a career in manufacturing if given the right opportunity. A Japanese company would be of special interest to him because he wishes to practice his Japanese, for which he has received an N5 Proficiency Level Certification from the Japanese Government through the Japan Educational Exchanges and Services (JEES) for passing the Japanese Language Proficiency Test (JLPT) in July 2023.</p>
+          <p>In line with his intention to join the financial sector, he took on internships in PriceWaterhouseCoopers Business Services Philippines (PwC BSP) and Asia United Bank (AUB). These on-the-job trainings provided him the chance to experience first-hand the workings inside a financial institution.</p>
+          <div class="about-buttons-wrapper">
+            <a href="#" class="btn-action btn-primary-action">Download CV</a>
+            <a href="#" class="btn-action btn-secondary-action">VLOG</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Career Summary -->
+    <section class="section-wrapper dark-bg summary-section">
+      <h2>Career Summary</h2>
+      <p>Eloisa served as a Marketing Director at the Technological Institute of the Philippines, where she spearheaded the institution's rebranding initiatives and oversaw all communications, digital media and public relations activities. Prior to this, she was Head of Marketing at First Metro Asset Management, Inc. (former Metrobank Group subsidiary), where she strengthened investor confidence through compliance-aligned communication strategies, regulatory documentation and digital campaigns.</p>
+      <p>Her financial services career also includes leadership roles at BPI-Philam Life Assurance Corp., Security Bank, Rizal Commercial Banking Corporation, and Metrobank/Global Bank, where she launched innovative products, drove savings growth through high-impact promotions, and pioneered one of the bank's early phone-banking facilities. Earlier in her career, Eloisa honed her consumer marketing expertise at Universal Robina Corporation, where she successfully launched Hunt's Party Spaghetti Sauce—a consumer product that exceeded sales forecasts by 87% and captured 36% of category sales within three months.</p>
+      <div class="summary-btn-wrapper">
+        <a href="#" class="btn-action btn-light-action">Request Complete CV</a>
+      </div>
+    </section>
+
+    <!-- Section 3: Professional Experience -->
+    <section class="section-wrapper dark-bg experience-section">
+      <h2>Professional Experience</h2>
+
+      <div class="experience-item">
+        <div class="job-meta">
+          <h3>Marketing Director</h3>
+          <p>Technological Institute of the Philippines</p>
+          <p class="job-dates">( Jan 2025 to April 2025 )</p>
+        </div>
+        <div class="job-details">
+          <ul>
+            <li>Directed marketing operations, communications and rebranding initiatives while managing a staff of six (6) creative specialists (three multimedia artists, two social media specialists, and one website specialist) and facilitating the hiring process for three (3) more marketing personnel (one marketing manager, one writer and one public relations specialist).</li>
+            <li>Oversaw all the marketing activities including all press releases, social media management, video production, merchandising and event coverage. Screened all external communication materials prior to public release.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-meta">
+          <h3>Marketing Department Head</h3>
+          <p>First Metro Asset Management, Inc.</p>
+          <p><em>Former Metrobank Group subsidiary</em></p>
+          <p class="job-dates">( Dec 2022 to Dec 2024 )</p>
+        </div>
+        <div class="job-details">
+          <ul>
+            <li>Approved all corporate communications and PR materials released to the public including podcast scripts, press articles and all marketing materials such as brochures, sales folders and sales letters, etc.</li>
+            <li>Revised client account opening documents in alignment with banking laws, SEC regulations and Metrobank audit rules.</li>
+            <li>Developed the company's consumer protection manual approved by the Board and submitted to SEC.</li>
+            <li>Managed the yearly Annual Stockholder's Meeting including coordination with the Board, supervision of SEC report submission, print ad release in national broadsheet newspapers, communication to the stockholders on securing quorum attendance and staging of the meeting.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-meta">
+          <h3>Product Manager</h3>
+          <p>BPI-Philam Life Assurance Corp.</p>
+          <p class="job-dates">( Aug 2019 to March 2022 )</p>
+        </div>
+        <div class="job-details">
+          <ul>
+            <li>Directed the product development processes including the coordination of technical, underwriting and compliance requirements. Includes the supervision of user acceptance testing.</li>
+            <li>Managed the partnership with Citicorp Financial Services and Insurance Brokerage.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-footer-link">
+        <a href="#">To Read More, Request Complete CV here</a>
+      </div>
+    </section>
+
+    <!-- Section 4: Recommendation Letters -->
+    <section class="section-wrapper recommendations-section">
+      <h2>Recommendation Letters</h2>
+      <div class="section-divider-line"></div>
+      <div class="recommendations-grid">
+        <div class="recommender-card">
+          <div class="recommender-avatar">
+            <img src="logo-metrobank.png" alt="Bernard M. Lapuz">
+          </div>
+          <h3>Bernard M. Lapuz</h3>
+          <p>Former Senior Vice President<br>Corporate Planning Group Head<br>Metrobank Corporation</p>
+          <a href="#">Click here to download the Recommendation Letter</a>
+        </div>
+
+        <div class="recommender-card">
+          <div class="recommender-avatar">
+            <img src="logo-rcbc.png" alt="Allan M. Tumbaga">
+          </div>
+          <h3>Allan M. Tumbaga</h3>
+          <p>Former Vice President<br>Marketing Department Head<br>Rizal Commercial Banking Corp.</p>
+          <a href="#">Click here to download the Recommendation Letter</a>
+        </div>
+
+        <div class="recommender-card">
+          <div class="recommender-avatar">
+            <img src="logo-bpiphilam.png" alt="Celeste Joy Linsangan">
+          </div>
+          <h3>Celeste Joy Linsangan</h3>
+          <p>Director ( current )<br>Partnership & Customer Development Marketing<br>BPI-Philam Life</p>
+          <a href="#">Click here to download the Recommendation Letter</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Structural Rule 3: Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Structural Rule 4: Loader Script -->
+  <script src="include.js"></script>
+</body>
+</html>
