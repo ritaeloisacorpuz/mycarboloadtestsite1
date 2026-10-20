@@ -5,13 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Under Construction - myBiblioteque</title>
   
-  <!-- 5. Link the external stylesheet (styles.css) inside the <head> section -->
-  <link rel="stylesheet" href="style.css">
+  <!-- 1. Link external stylesheet inside <head> -->
+  <link rel="stylesheet" href="styles.css">
   
   <style>
+    /* ==========================================
+       GLOBAL LAYOUT DEFAULTS (SKELETON)
+       ========================================== */
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ==========================================
+       UNDER CONSTRUCTION PAGE LAYOUT & SIZES ONLY
+       ========================================== */
     .construction-page-container {
       width: 100%;
-      background-color: #dcdcdc;
       padding: 60px 20px 80px 20px;
       display: flex;
       justify-content: center;
@@ -31,7 +49,6 @@
     .construction-title {
       font-size: 2.2rem;
       font-weight: 300;
-      color: #333333;
       margin-bottom: 40px;
       letter-spacing: 0.5px;
     }
@@ -40,11 +57,9 @@
       position: relative;
       max-width: 550px;
       margin: 0 auto;
-      background-color: #111111;
       padding: 0;
-      border-radius: 2px;
+      border-radius: 4px;
       overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 
     .coming-soon-banner-box img {
@@ -101,7 +116,7 @@
 </head>
 <body>
 
-  <!-- 6. Insert the header placeholder at the very top inside <body> -->
+  <!-- 2. Header Placeholder at the very top inside <body> -->
   <div id="header-placeholder"></div>
 
   <!-- MAIN UNDER CONSTRUCTION CONTENT -->
@@ -120,10 +135,10 @@
     </div>
   </main>
 
-  <!-- 7. Insert the footer placeholder at the very bottom right before </body> -->
+  <!-- 3. Footer Placeholder at the very bottom right before </body> -->
   <div id="footer-placeholder"></div>
 
-  <!-- 8. Directly underneath the footer placeholder, include the loader script -->
+  <!-- 4. Loader script directly underneath footer placeholder -->
   <script src="include.js"></script>
 
 </body>
