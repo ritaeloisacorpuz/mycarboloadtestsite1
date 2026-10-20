@@ -605,3 +605,46 @@ footer.site-footer hr.footer-divider {
     padding: 20px 15px;
   }
 }
+/* ==========================================
+   BLOG PAGE - COLOR THEME & LOOK (ADDITION)
+   ========================================== */
+
+/* Dark text for card titles & body */
+.destination-card h3 {
+  color: #1a2536;
+}
+
+.destination-card p {
+  color: #2b384e;
+}
+
+/* "Read More" button link style */
+.read-more {
+  color: #1a2536;
+  transition: opacity 0.2s ease;
+}
+
+.read-more:hover {
+  opacity: 0.7;
+}
+
+/* Play button theme overlay */
+.play-button {
+  background-color: rgba(26, 37, 54, 0.75);
+  color: #ffffff;
+}
+
+.play-button:hover {
+  background-color: rgba(26, 37, 54, 0.9);
+}
+
+/* Primary Pill Button */
+.btn-pill {
+  background-color: #1a2536;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.btn-pill:hover {
+  background-color: #2c3e50;
+}
