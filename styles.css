@@ -310,3 +310,49 @@ a:hover {
 .step-item {
   border-bottom: 1px solid rgba(38, 49, 73, 0.2);
 }
+/* ==========================================
+   HEADER & FOOTER COLOR THEMING (#263149 / #E5F7AF)
+   ========================================== */
+
+/* Header Theme */
+.site-header {
+  background-color: #263149 !important;
+  color: #E5F7AF !important;
+  border-bottom: 1px solid rgba(229, 247, 175, 0.2) !important;
+}
+
+.site-header a,
+.main-nav a {
+  color: #E5F7AF !important;
+}
+
+.main-nav a:hover {
+  opacity: 0.8;
+}
+
+/* Footer Theme */
+footer.site-footer {
+  background-color: #263149 !important;
+  color: #E5F7AF !important;
+  border-top: 1px solid rgba(229, 247, 175, 0.2) !important;
+}
+
+footer.site-footer h4,
+footer.site-footer p,
+footer.site-footer small,
+footer.site-footer ul li {
+  color: #E5F7AF !important;
+}
+
+footer.site-footer a {
+  color: #E5F7AF !important;
+}
+
+footer.site-footer a:hover {
+  opacity: 0.8;
+}
+
+/* Divider Line Color Override for Footer */
+footer.site-footer hr.footer-divider {
+  border-top: 1px solid rgba(229, 247, 175, 0.25) !important;
+}
