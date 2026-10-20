@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  
+  <!-- Structural Rule 1: Link external stylesheet for themes, fonts, colors, and global responsiveness -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ============================================================
+       STRUCTURAL & LAYOUT CSS ("Bones" of the About Us Page)
+       Contains layout, grid/flex structure, spacing, positioning,
+       margins, paddings, display modes, and font sizes.
+       ============================================================ */
+
+    /* Default Alignments */
+    p {
+      text-align: justify;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+    img {
+      object-position: center top;
+      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Container Spacing & Layout */
+    .about-main-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .about-section-block {
+      padding: 50px 30px;
+      margin-bottom: 40px;
+      border-radius: 12px;
+    }
+
+    .header-group {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header-group h1 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .header-group h2 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .header-group p {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .short-accent-line {
+      width: 50px;
+      height: 3px;
+      margin: 15px auto 0 auto;
+    }
+
+    /* --- SECTION 1: ABOUT US HERO (SPLIT VIEW) --- */
+    .about-split-grid {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about-split-img {
+      flex: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .about-split-text {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .about-split-text h3 {
+      font-size: 1.4rem;
+      text-align: left;
+    }
+
+    .about-split-text p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* --- SECTION 2: THE FOOD BRANDS (3 COLUMNS) --- */
+    .food-brands-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .brand-card {
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-photo-wrap {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .brand-photo-wrap img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .brand-card-body {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .brand-card-body h3 {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .brand-category {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .brand-description {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* --- SECTION 3: CONTACT FLATLAY CARD --- */
+    .contact-flatlay-section {
+      padding: 60px 20px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .contact-card-white {
+      padding: 30px 40px;
+      border-radius: 10px;
+      display: flex;
+      gap: 40px;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 850px;
+    }
+
+    .contact-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 6px;
+    }
+
+    .contact-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-value {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    /* Page-Specific Layout Responsiveness Breaks */
+    @media screen and (max-width: 850px) {
+      .about-split-grid {
+        flex-direction: column;
+      }
+      .food-brands-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .contact-card-white {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Structural Rule 2: Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <main class="about-main-container">
+
+    <!-- Section 1: About Us Hero (Split View) -->
+    <section class="about-section-block hero-about-card">
+      <div class="header-group">
+        <h1>About Us</h1>
+        <div class="short-accent-line"></div>
+      </div>
+      <div class="about-split-grid">
+        <div class="about-split-img">
+          <img src="images/studying-girl.jpg" alt="Child studying">
+        </div>
+        <div class="about-split-text">
+          <h3>This is who we are</h3>
+          <p>
+            We are parents, educators and business women alarmed at the declining English literacy and dropping proficiency in Math and Science. So, we banded together to help busy parents provide their kids with the skills they need to become who they dream to be in life — an Engineer, a Doctor, a Lawyer or maybe the first Filipino Nobel Prize winner? Or maybe the next best-selling author? The possibilities are unlimited.
+          </p>
+          <p>
+            With this mission in mind, we formed a group of dedicated educators who derive deep satisfaction in helping your children achieve academic excellence — our Power Tutors.<br><br>
+            Our Power Tutors will design and tailor your academic program to meet your child's specific needs. We will assess your child's learning style and chart his learning milestones appropriate to his skills and capabilities.
+          </p>
+          <h3>Our Commitment</h3>
+          <p>
+            We are dedicated to providing top-notch tutorial services to students from grade school to college. With a strong focus on academic excellence, we offer personalized tutorial to meet the unique learning needs of each student. Our team of experienced educators is passionate about helping your child succeed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: The Food Brands -->
+    <section class="about-section-block food-brands-section">
+      <div class="header-group">
+        <h2>The Food Brands</h2>
+        <p>Explore the diverse culinary concepts under our portfolio.</p>
+        <div class="short-accent-line"></div>
+      </div>
+      <div class="food-brands-grid">
+        <!-- Brand 1 -->
+        <div class="brand-card">
+          <div class="brand-photo-wrap">
+            <img src="images/teacher-angelica.png" alt="Brand One">
+          </div>
+          <div class="brand-card-body">
+            <h3>Artisan Bakery & Cafe</h3>
+            <p class="brand-category">Pastries & Specialty Coffee</p>
+            <p class="brand-description">
+              Offering freshly baked sourdough, handcrafted pastries, and farm-to-cup coffee blends designed to elevate everyday morning routines with comfort and quality ingredients.
+            </p>
+          </div>
+        </div>
+
+        <!-- Brand 2 -->
+        <div class="brand-card">
+          <div class="brand-photo-wrap">
+            <img src="images/teacher-elisha.jpg" alt="Brand Two">
+          </div>
+          <div class="brand-card-body">
+            <h3>Asian Fusion Bistro</h3>
+            <p class="brand-category">Modern Pan-Asian Cuisine</p>
+            <p class="brand-description">
+              Bringing vibrant regional Asian flavors together through modern culinary techniques, sourcing sustainable produce to create flavorful, wholesome dining experiences.
+            </p>
+          </div>
+        </div>
+
+        <!-- Brand 3 -->
+        <div class="brand-card">
+          <div class="brand-photo-wrap">
+            <img src="images/teacher-danna.png" alt="Brand Three">
+          </div>
+          <div class="brand-card-body">
+            <h3>Gourmet Kitchen Lab</h3>
+            <p class="brand-category">Farm-to-Table Comfort Food</p>
+            <p class="brand-description">
+              Specializing in organic, wholesome meals prepared fresh daily. A focus on balanced nutrition ensures every meal delivers rich flavors without compromising wellness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Contact Flatlay Card -->
+    <section class="contact-flatlay-section" style="background-image: url('images/bg-flatlay-desk.jpg');">
+      <div class="contact-card-white">
+        <div class="contact-col">
+          <span class="contact-label">Call</span>
+          <span class="contact-value">0956-400-1626</span>
+        </div>
+        <div class="contact-col">
+          <span class="contact-label">Email</span>
+          <a href="mailto:powertutorial@hawthorneconsultancymanila.com" class="contact-value">powertutorial@hawthorneconsultancymanila.com</a>
+        </div>
+        <div class="contact-col">
+          <span class="contact-label">Follow</span>
+          <a href="#" class="contact-value">Facebook</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Structural Rule 3: Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Structural Rule 4: Loader Script -->
+  <script src="include.js"></script>
+</body>
+</html>
