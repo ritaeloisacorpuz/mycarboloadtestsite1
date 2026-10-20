@@ -196,10 +196,8 @@
   </style>
 </head>
 <body>
-
   <!-- 2. Header Placeholder at the very top inside <body> -->
   <div id="header-placeholder"></div>
-
   <!-- MAIN PAGE CONTENT -->
   <main class="order-page-container">
     
@@ -207,10 +205,10 @@
     <div class="order-form-wrapper">
       <h1 class="form-heading">Order Form</h1>
       
-      <form action="https://contactformhandler.rita-eloisa-corpuz.workers.dev" method="POST" enctype="multipart/form-data">
+      <form id="paymentOrderForm" action="https://forms.thebluepagesmanila.com" method="POST" enctype="multipart/form-data">
         
-        <!-- Cloudflare Email Recipient Target -->
-        <input type="hidden" name="_to" value="rita.eloisa.corpuz@student.ateneo.edu">
+        <!-- Subject Identification for Cloudflare Worker -->
+        <input type="hidden" name="_subject" value="Order and Payment Form Submission">
 
         <!-- First Name & Last Name -->
         <div class="form-group-row">
@@ -223,7 +221,6 @@
             <input type="text" id="last_name" name="last_name" class="form-control">
           </div>
         </div>
-
         <!-- Email & Phone -->
         <div class="form-group-row">
           <div class="form-group">
@@ -235,13 +232,11 @@
             <input type="tel" id="phone" name="phone" class="form-control">
           </div>
         </div>
-
         <!-- Order Details Textarea -->
         <div class="form-group">
           <label for="order_details">Indicate below the details of the items or package you want to order</label>
           <textarea id="order_details" name="order_details" class="form-control"></textarea>
         </div>
-
         <!-- RECEIPT UPLOAD SECTION -->
         <div class="receipt-section">
           <p class="receipt-note">Kindly input the e-mail where you want your order confirmation to be sent.</p>
@@ -250,28 +245,22 @@
             <label for="delivery_email">Email</label>
             <input type="email" id="delivery_email" name="delivery_email" class="form-control" placeholder="example@domain.com">
           </div>
-
           <label class="button btn-upload-teal">
             + Upload It
-            <input type="file" name="payment_receipt" accept="image/*,.pdf" style="display: none;">
+            <input type="file" id="payment_receipt_input" name="payment_receipt" accept="image/*,.pdf" style="display: none;">
           </label>
-
           <p class="receipt-instructions">
             Upload the payment receipt screenshot here.<br>
             Please write your e-mail address on the screenshot before uploading.
           </p>
-
           <!-- SINGLE SUBMIT BUTTON -->
           <button type="submit" class="button btn-submit-secondary">Submit</button>
         </div>
       </form>
     </div>
-
     <hr class="section-divider">
-
     <!-- INSTRUCTIONS SECTION BELOW FORM -->
     <h2 class="order-page-title">Order &amp; Payment Instructions</h2>
-
     <!-- STEP 1 -->
     <div class="step-block">
       <div class="step-image">
@@ -285,7 +274,6 @@
         </p>
       </div>
     </div>
-
     <!-- STEP 2 -->
     <div class="step-block reverse">
       <div class="step-image">
@@ -299,7 +287,6 @@
         </p>
       </div>
     </div>
-
     <!-- STEP 3 -->
     <div class="step-block">
       <div class="step-image">
@@ -313,7 +300,6 @@
         </p>
       </div>
     </div>
-
     <!-- STEP 4 -->
     <div class="step-block reverse">
       <div class="step-image">
@@ -327,13 +313,63 @@
         </p>
       </div>
     </div>
-
   </main>
-
   <!-- 3. Footer Placeholder at the very bottom right before </body> -->
   <div id="footer-placeholder"></div>
-
   <!-- 4. Loader script directly underneath footer placeholder -->
   <script src="include.js"></script>
+
+  <!-- CLOUDFLARE FORM SUBMISSION & BASE64 RECEIPT CONVERTER SCRIPT -->
+  <script>
+    document.getElementById('paymentOrderForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerText;
+      submitBtn.innerText = "Uploading & Sending...";
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(this);
+        const payload = {};
+
+        // Convert standard text inputs
+        for (let [key, value] of formData.entries()) {
+          if (typeof value === 'string') {
+            payload[key] = value;
+          }
+        }
+
+        // Convert receipt upload file to Base64 for Cloudflare
+        const fileInput = document.getElementById('payment_receipt_input');
+        if (fileInput && fileInput.files[0]) {
+          const file = fileInput.files[0];
+          const reader = new FileReader();
+          reader.readAsDataURL(file);
+          await new Promise(resolve => reader.onload = resolve);
+          payload.receiptBase64 = reader.result;
+          payload.fileName = file.name;
+        }
+
+        const response = await fetch('https://forms.thebluepagesmanila.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          alert('Order and payment receipt sent successfully!');
+          this.reset();
+        } else {
+          alert('Error: ' + result.error);
+        }
+      } catch (err) {
+        alert('Order submission failed. Please try again.');
+      } finally {
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>
