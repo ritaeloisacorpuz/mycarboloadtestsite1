@@ -10,8 +10,9 @@
   
   <style>
     /* ==========================================
-       GLOBAL ALIGNMENT & OBJECT-FIT DEFAULTS
+       BLOG PAGE LAYOUT & FONT SIZES ONLY
        ========================================== */
+    /* Structural Base Alignments */
     p {
       text-align: justify;
     }
@@ -23,9 +24,6 @@
       object-fit: cover;
     }
 
-    /* ==========================================
-       BLOG PAGE LAYOUT & FONT SIZES ONLY
-       ========================================== */
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -94,14 +92,14 @@
       line-height: 1.6;
     }
 
-    /* Spotlight Destinations Grid */
+    /* Spotlight Destinations Grid & Cards */
     .destinations-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px 20px;
+      gap: 24px;
       margin-bottom: 30px;
     }
-    .blog-item-card {
+    .destination-item {
       display: flex;
       flex-direction: column;
     }
@@ -130,23 +128,24 @@
       letter-spacing: 0.5px;
     }
 
-    /* Article Info Under Square Boxes */
-    .blog-card-content h2.article-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-bottom: 10px;
+    /* Article Content Below Cards */
+    .article-meta-content h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 12px;
       text-align: left;
-      line-height: 1.25;
     }
-    .blog-card-content p.article-excerpt {
+    .article-meta-content p {
       font-size: 0.875rem;
       line-height: 1.5;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      text-align: justify;
     }
-    .read-more {
+    .read-more-link {
       font-size: 0.875rem;
-      font-weight: 700;
+      font-weight: 600;
       display: inline-block;
+      text-decoration: none;
     }
 
     .centered-card-wrapper {
@@ -154,8 +153,8 @@
       justify-content: center;
       margin-bottom: 40px;
     }
-    .centered-card-wrapper .blog-item-card {
-      width: calc(33.333% - 14px);
+    .centered-card-wrapper .destination-item {
+      width: calc(33.333% - 16px);
     }
 
     /* Action Button Block */
@@ -202,7 +201,7 @@
       .guides-grid {
         grid-template-columns: 1fr;
       }
-      .centered-card-wrapper .blog-item-card {
+      .centered-card-wrapper .destination-item {
         width: 100%;
       }
       .video-hero {
@@ -223,29 +222,29 @@
       <h1>Spotlight destinations</h1>
       <p>Discover unique travel destinations and experience local cultures directly with trusted guides.</p>
     </header>
-    
+
     <div class="video-hero">
       <img src="https://picsum.photos/1200/600?random=20" alt="Spotlight destination thumbnail">
       <div class="play-button">
         <div class="play-icon"></div>
       </div>
     </div>
-    
+
     <p class="hero-caption">
       Explore curated local packages across top global destinations. Handpicked experiences designed for comfort and ease.
     </p>
 
-    <!-- Section 2: Destinations Grid with Titles, Summaries, and Read More -->
+    <!-- Section 2: Destinations Grid -->
     <div class="destinations-grid">
       
       <!-- Card 1 -->
-      <article class="blog-item-card">
+      <article class="destination-item">
         <div class="destination-card">
           <img src="https://picsum.photos/400/500?random=21" alt="Tokyo, Japan">
           <div class="overlay">
             <h3>Tokyo, Japan</h3>
           </div>
         </div>
-        <div class="blog-card-content">
-          <h2 class="article-title">Understand your customers</h2>
-          <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        <div class="article-meta-content">
+          <h3>Understand your customers</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
