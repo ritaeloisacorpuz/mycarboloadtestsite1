@@ -543,3 +543,65 @@ footer.site-footer hr.footer-divider {
     padding: 25px 15px;
   }
 }
+/* ==========================================
+   ADDITIONAL BLOG & SAFETY PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Page Main Title Accent */
+.latest-container .page-main-title {
+  color: #263149;
+}
+
+/* Light Card Theme Rules */
+.card-light-themed {
+  background-color: #FFFFFF;
+  border-color: rgba(38, 49, 73, 0.2);
+  color: #263149;
+  box-shadow: 0 4px 15px rgba(38, 49, 73, 0.05);
+}
+
+.card-light-themed .article-title,
+.card-light-themed .article-body p,
+.card-light-themed .pr-link,
+.card-light-themed .article-action-link {
+  color: #263149;
+}
+
+.card-light-themed a:hover {
+  opacity: 0.75;
+}
+
+/* Dark Accent Card Theme Rules */
+.card-dark-themed {
+  background-color: #263149;
+  border-color: #263149;
+  color: #E5F7AF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-dark-themed .article-title,
+.card-dark-themed .article-body p,
+.card-dark-themed a {
+  color: #E5F7AF;
+}
+
+.card-dark-themed a:hover {
+  opacity: 0.85;
+}
+
+/* Image Frame Borders / Backdrops */
+.image-frame img {
+  border: 1px solid rgba(38, 49, 73, 0.1);
+}
+
+/* Mobile Responsive Adjustments for Cards */
+@media screen and (max-width: 768px) {
+  .latest-container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .article-card {
+    padding: 20px 15px;
+  }
+}
