@@ -398,3 +398,72 @@ footer.site-footer hr.footer-divider {
     width: auto !important;
   }
 }
+/* ==========================================
+   ADDITIONAL CAREER PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Hero Outer Card Background */
+.career-hero-card {
+  background-color: #FAFAF2;
+  border: 1px solid rgba(38, 49, 73, 0.08);
+}
+
+/* Button Theming for Career Hero */
+.btn-primary-action {
+  background-color: #263149;
+  color: #E5F7AF !important;
+  border: 1.5px solid #263149;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary-action:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary-action {
+  background-color: transparent;
+  color: #263149 !important;
+  border: 1.5px solid #263149;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn-secondary-action:hover {
+  background-color: #263149;
+  color: #E5F7AF !important;
+}
+
+/* Light Action Button (Used inside dark background sections) */
+.btn-light-action {
+  background-color: #FFFFFF;
+  color: #263149 !important;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+.btn-light-action:hover {
+  opacity: 0.9;
+}
+
+/* Section Line Divider Color Theme */
+.section-divider-line {
+  background-color: #263149;
+}
+
+/* Experience List Links Underline Styling */
+.experience-footer-link a {
+  color: #E5F7AF;
+  text-decoration: underline;
+}
+
+.recommendations-section {
+  background-color: #FFFFFF;
+}
+
+.recommender-card a {
+  color: #263149;
+}
+
+/* Ensures layout responsive rules inherit mobile/tablet container width limits */
+@media screen and (max-width: 768px) {
+  .section-wrapper {
+    padding: 25px 15px;
+  }
+}
