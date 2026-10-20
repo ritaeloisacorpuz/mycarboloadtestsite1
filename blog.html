@@ -10,6 +10,22 @@
   
   <style>
     /* ==========================================
+       GLOBAL LAYOUT DEFAULTS (SKELETON)
+       ========================================== */
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ==========================================
        BLOG PAGE LAYOUT & FONT SIZES ONLY
        ========================================== */
     .container {
@@ -22,14 +38,12 @@
     .section-header {
       margin-bottom: 40px;
     }
-
     .section-header h1,
     .section-header h2 {
       font-size: 2.5rem;
       font-weight: normal;
       margin-bottom: 10px;
     }
-
     .section-header p {
       font-size: 0.875rem;
       max-width: 600px;
@@ -42,16 +56,14 @@
       width: 100%;
       height: 450px;
       margin-bottom: 30px;
-      border-radius: 4px;
+      border-radius: 8px;
       overflow: hidden;
     }
-
     .video-hero img {
       width: 100%;
       height: 100%;
       display: block;
     }
-
     .play-button {
       position: absolute;
       top: 50%;
@@ -66,11 +78,9 @@
       cursor: pointer;
       transition: transform 0.2s ease;
     }
-
     .play-button:hover {
       transform: translate(-50%, -50%) scale(1.08);
     }
-
     .play-icon {
       width: 0;
       height: 0;
@@ -79,7 +89,6 @@
       border-left: 16px solid currentColor;
       margin-left: 4px;
     }
-
     .hero-caption {
       max-width: 700px;
       margin: 0 auto 50px;
@@ -87,39 +96,48 @@
       line-height: 1.6;
     }
 
-    /* Spotlight Destinations Grid */
+    /* Destinations Grid */
     .destinations-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 24px;
       margin-bottom: 30px;
     }
-
     .destination-card {
-      position: relative;
-      height: 280px;
-      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
       overflow: hidden;
     }
-
     .destination-card img {
       width: 100%;
-      height: 100%;
+      height: 240px;
+      border-radius: 8px;
       display: block;
+      margin-bottom: 16px;
     }
-
-    .destination-card .overlay {
-      position: absolute;
-      inset: 0;
+    .destination-card .card-body {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      flex-grow: 1;
     }
-
     .destination-card h3 {
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-align: left; /* Aligns card subheadings with content */
+    }
+    .destination-card p {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .read-more {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: auto;
     }
 
     .centered-card-wrapper {
@@ -127,9 +145,8 @@
       justify-content: center;
       margin-bottom: 40px;
     }
-
     .centered-card-wrapper .destination-card {
-      width: calc(33.333% - 14px);
+      width: calc(33.333% - 16px);
     }
 
     /* Action Button Block */
@@ -137,12 +154,12 @@
       text-align: center;
       margin-bottom: 80px;
     }
-
     .btn-pill {
       padding: 12px 28px;
       border-radius: 25px;
-      font-size: 0.75rem;
+      font-size: 0.875rem;
       font-weight: 600;
+      border: none;
       cursor: pointer;
     }
 
@@ -152,27 +169,24 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-
     .guide-card {
       text-align: center;
     }
-
     .guide-card img {
       width: 100%;
       height: 320px;
-      border-radius: 4px;
+      border-radius: 8px;
       margin-bottom: 12px;
       display: block;
     }
-
     .guide-card h4 {
-      font-size: 0.875rem;
+      font-size: 1rem;
       font-weight: 600;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
-
     .guide-card p {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
+      text-align: center;
     }
 
     /* Mobile Responsive Layout Adjustments */
@@ -181,11 +195,9 @@
       .guides-grid {
         grid-template-columns: 1fr;
       }
-
       .centered-card-wrapper .destination-card {
         width: 100%;
       }
-
       .video-hero {
         height: 280px;
       }
@@ -193,7 +205,6 @@
   </style>
 </head>
 <body>
-
   <!-- 2. Header Placeholder at the very top inside <body> -->
   <div id="header-placeholder"></div>
 
@@ -221,20 +232,28 @@
     <div class="destinations-grid">
       <div class="destination-card">
         <img src="https://picsum.photos/400/500?random=21" alt="Tokyo, Japan">
-        <div class="overlay">
+        <div class="card-body">
           <h3>Tokyo, Japan</h3>
+          <p>Explore vibrant streets, traditional temples, and cutting-edge culinary scenes with local experts.</p>
+          <a href="#" class="read-more">Read more ›</a>
         </div>
       </div>
+
       <div class="destination-card">
         <img src="https://picsum.photos/400/500?random=22" alt="Paris, France">
-        <div class="overlay">
+        <div class="card-body">
           <h3>Paris, France</h3>
+          <p>Experience historic landmarks, charming cafes, and world-class museums with custom guided tours.</p>
+          <a href="#" class="read-more">Read more ›</a>
         </div>
       </div>
+
       <div class="destination-card">
         <img src="https://picsum.photos/400/500?random=23" alt="Bruges, Belgium">
-        <div class="overlay">
+        <div class="card-body">
           <h3>Bruges, Belgium</h3>
+          <p>Wander through fairytale canals, medieval architecture, and historic cobblestone alleyways.</p>
+          <a href="#" class="read-more">Read more ›</a>
         </div>
       </div>
     </div>
@@ -242,11 +261,10 @@
     <div class="centered-card-wrapper">
       <div class="destination-card">
         <img src="https://picsum.photos/400/500?random=24" alt="London, UK">
-        <h2>Understand your customers</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" class="read-more">Read more &rsaquo;</a>
-        <div class="overlay">
+        <div class="card-body">
           <h3>London, UK</h3>
+          <p>Discover iconic landmarks, rich history, and diverse neighborhoods across the city.</p>
+          <a href="#" class="read-more">Read more ›</a>
         </div>
       </div>
     </div>
@@ -267,11 +285,13 @@
         <h4>Miura Avaron</h4>
         <p>Tokyo, Japan</p>
       </div>
+
       <div class="guide-card">
         <img src="https://picsum.photos/400/500?random=26" alt="Miura Avaron - Paris">
         <h4>Miura Avaron</h4>
         <p>Paris, France</p>
       </div>
+
       <div class="guide-card">
         <img src="https://picsum.photos/400/500?random=27" alt="Miura Avaron - Bruges">
         <h4>Miura Avaron</h4>
