@@ -467,3 +467,79 @@ footer.site-footer hr.footer-divider {
     padding: 25px 15px;
   }
 }
+/* ==========================================
+   ADDITIONAL ABOUT PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Hero Outer Card Background & Borders */
+.hero-about-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(38, 49, 73, 0.08);
+}
+
+/* Section Headings Color Accents */
+.about-main-container h1,
+.about-main-container h2,
+.about-main-container h3,
+.brand-category {
+  color: #263149;
+}
+
+/* Accent Line Divider Color */
+.short-accent-line {
+  background-color: #263149;
+}
+
+/* Food Brands Section Theming */
+.food-brands-section {
+  background-color: rgba(38, 49, 73, 0.04);
+}
+
+.brand-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(38, 49, 73, 0.12);
+  box-shadow: 0 4px 15px rgba(38, 49, 73, 0.05);
+}
+
+.brand-card-body {
+  background-color: #263149;
+  color: #E5F7AF;
+}
+
+.brand-card-body h3,
+.brand-card-body .brand-category {
+  color: #E5F7AF;
+}
+
+.brand-card-body p {
+  color: #E5F7AF;
+}
+
+/* Contact Card White Container Theming */
+.contact-card-white {
+  background-color: #FFFFFF;
+  color: #263149;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-label {
+  color: rgba(38, 49, 73, 0.6);
+}
+
+.contact-value,
+.contact-col a {
+  color: #263149;
+  transition: opacity 0.2s ease;
+}
+
+.contact-col a:hover {
+  opacity: 0.75;
+}
+
+/* Mobile Padding Fallbacks */
+@media screen and (max-width: 768px) {
+  .about-section-block {
+    padding: 25px 15px;
+  }
+}
