@@ -356,3 +356,36 @@ footer.site-footer a:hover {
 footer.site-footer hr.footer-divider {
   border-top: 1px solid rgba(229, 247, 175, 0.25) !important;
 }
+/* Mobile menu wrap styling */
+@media screen and (max-width: 768px) {
+  /* Target your menu container (ul, nav, or flex wrapper) */
+  .nav-menu,
+  header nav ul,
+  footer nav ul {
+    display: flex;
+    flex-direction: row;       /* Keep items side-by-side */
+    flex-wrap: wrap;           /* Allow items to break into multiple rows */
+    justify-content: center;   /* Center the items horizontally */
+    align-items: center;
+    gap: 12px 18px;            /* Row gap and item gap */
+    padding: 15px 20px;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  /* Ensure individual links/items don't take up 100% width */
+  .nav-menu li,
+  header nav ul li,
+  footer nav ul li {
+    width: auto;
+    display: inline-block;
+  }
+
+  .nav-menu a,
+  header nav ul li a,
+  footer nav ul li a {
+    white-space: nowrap;       /* Keeps individual link text like "Affiliate Program" on one line */
+    font-size: 14px;
+  }
+}
