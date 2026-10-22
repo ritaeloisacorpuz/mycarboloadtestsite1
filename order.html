@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cleaning Appointment Booking Form - Maid-on-Demand</title>
+  <title>Order Form - myCarboLoad</title>
   
   <!-- 1. Link external stylesheet inside <head> -->
   <link rel="stylesheet" href="styles.css">
@@ -194,13 +194,13 @@
     
     <!-- Page Header Title & Instructions -->
     <header class="page-header">
-      <h1>Cleaning Appointment Booking Form</h1>
-      <p>Get ready to have more time and rest !</p>
-      <p>Input the details of your cleaning appointment in the form underneath and follow the payment instructions below the form. Make sure you notify us via Viber and mobile text message at 0956-400-1626 to notify us when you have made the booking so we can check our e-mails immediately.</p>
+      <h1>Order Form</h1>
+      <p>Order the Food to be the Person you need to be Today !</p>
+      <p>Let us know what you want and we will send it over right away! </p>
     </header>
     <!-- Cleaning Booking Form Block -->
     <div class="booking-card form-card-bg">
-      <h2 class="form-title">Book a Cleaning Appointment Today !</h2>
+      <h2 class="form-title">Order Now !</h2>
       <form id="cleaningBookingForm" action="https://forms.thebluepagesmanila.com" method="POST" enctype="multipart/form-data">
         
         <!-- Subject Identification for Cloudflare Worker -->
@@ -228,20 +228,23 @@
         </div>
         <!-- Cleaning Service Options Checkboxes -->
         <div class="options-group">
-          <span class="options-group-title">Indicate Type of Cleaning Service Requested *</span>
-          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Cleaning Lady"> Cleaning Lady</label>
-          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Cleaning Lady with Equipment"> Cleaning Lady with Equipment</label>
-          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Party Staff"> Party Staff</label>
-          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Private Chef or Kitchen Staff"> Private Chef or Kitchen Staff</label>
-          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Others"> Others</label>
+          <span class="options-group-title">Indicate Order *</span>
+          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Cleaning Lady"> Pasta Ricotta</label>
+          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Cleaning Lady with Equipment"> Bechamel Pasta</label>
+          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Party Staff"> Teriyaki ala Pollo</label>
+          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Private Chef or Kitchen Staff"> Pan-seared Fish Steak</label>
+          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Others"> Cauliflower Shrimp</label>
+          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Others"> Beef Broccoli</label>
+          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Others"> Specialty Jam</label>
+          <label class="checkbox-item"><input type="checkbox" name="service_type" value="Others"> Specialty Sauces</label>
         </div>
         <div class="form-group">
-          <label for="others_explanation">If others, please explain</label>
+          <label for="others_explanation">For sauces, please indicate specific type of sauce</label>
           <input type="text" id="others_explanation" name="others_explanation" class="form-control-line">
         </div>
         <!-- Location Options Radio Buttons -->
         <div class="options-group">
-          <span class="options-group-title">Location of site to be cleaned</span>
+          <span class="options-group-title">Location for delivery</span>
           <label class="radio-item"><input type="radio" name="location" value="Makati"> Makati</label>
           <label class="radio-item"><input type="radio" name="location" value="BGC"> BGC</label>
           <label class="radio-item"><input type="radio" name="location" value="Ortigas"> Ortigas</label>
@@ -252,11 +255,11 @@
         </div>
         <!-- Property Details -->
         <div class="form-group">
-          <label for="complete_address">Complete Address of site to be cleaned *</label>
+          <label for="complete_address">Complete Address of delivery location*</label>
           <input type="text" id="complete_address" name="complete_address" class="form-control-line" required>
         </div>
         <div class="form-group">
-          <label for="property_size">Indicate size in square meters, the number of bathrooms and number of rooms *</label>
+          <label for="property_size">Indicate if with allergies or preferences *</label>
           <input type="text" id="property_size" name="property_size" class="form-control-line" required>
         </div>
         <div class="form-group">
@@ -265,11 +268,11 @@
         </div>
         <!-- Preferred Appointment Dates Section -->
         <p class="preferred-dates-title">
-          Indicate five (5) preferred Cleaning dates with time below. We will match it with the Cleaning Lady's schedule and confirm through Viber and e-mail.
+          If this is a meal subscription plan, indicate below the delivery dates and schedules within a one week timetable with time below.
         </p>
         <!-- Option #1 -->
         <div class="date-option-block">
-          <span class="date-option-label">Option #1</span>
+          <span class="date-option-label">Delivery Schedule #1</span>
           <div class="date-inputs-row">
             <div class="date-field-col"><label>Month</label><input type="text" name="opt1_month" class="form-control-line"></div>
             <div class="date-field-col"><label>Day</label><input type="text" name="opt1_day" class="form-control-line"></div>
@@ -279,7 +282,7 @@
         </div>
         <!-- Option #2 -->
         <div class="date-option-block">
-          <span class="date-option-label">Option #2</span>
+          <span class="date-option-label">Delivery Schedule #2</span>
           <div class="date-inputs-row">
             <div class="date-field-col"><label>Month</label><input type="text" name="opt2_month" class="form-control-line"></div>
             <div class="date-field-col"><label>Day</label><input type="text" name="opt2_day" class="form-control-line"></div>
@@ -289,7 +292,7 @@
         </div>
         <!-- Option #3 -->
         <div class="date-option-block">
-          <span class="date-option-label">Option #3</span>
+          <span class="date-option-label">Delivery Schedule #3</span>
           <div class="date-inputs-row">
             <div class="date-field-col"><label>Month</label><input type="text" name="opt3_month" class="form-control-line"></div>
             <div class="date-field-col"><label>Day</label><input type="text" name="opt3_day" class="form-control-line"></div>
@@ -299,7 +302,7 @@
         </div>
         <!-- Option #4 -->
         <div class="date-option-block">
-          <span class="date-option-label">Option #4</span>
+          <span class="date-option-label">Delivery Schedule #4</span>
           <div class="date-inputs-row">
             <div class="date-field-col"><label>Month</label><input type="text" name="opt4_month" class="form-control-line"></div>
             <div class="date-field-col"><label>Day</label><input type="text" name="opt4_day" class="form-control-line"></div>
@@ -307,9 +310,29 @@
             <div class="date-field-col"><label>Time</label><input type="time" name="opt4_time" class="form-control-line"></div>
           </div>
         </div>
-        <!-- Option #5 -->
+         <!-- Option #5 -->
         <div class="date-option-block">
-          <span class="date-option-label">Option #5</span>
+          <span class="date-option-label">Delivery Schedule #5</span>
+          <div class="date-inputs-row">
+            <div class="date-field-col"><label>Month</label><input type="text" name="opt4_month" class="form-control-line"></div>
+            <div class="date-field-col"><label>Day</label><input type="text" name="opt4_day" class="form-control-line"></div>
+            <div class="date-field-col"><label>Year</label><input type="text" name="opt4_year" class="form-control-line"></div>
+            <div class="date-field-col"><label>Time</label><input type="time" name="opt4_time" class="form-control-line"></div>
+          </div>
+        </div>
+         <!-- Option #6 -->
+        <div class="date-option-block">
+          <span class="date-option-label">Delivery Schedule #6</span>
+          <div class="date-inputs-row">
+            <div class="date-field-col"><label>Month</label><input type="text" name="opt4_month" class="form-control-line"></div>
+            <div class="date-field-col"><label>Day</label><input type="text" name="opt4_day" class="form-control-line"></div>
+            <div class="date-field-col"><label>Year</label><input type="text" name="opt4_year" class="form-control-line"></div>
+            <div class="date-field-col"><label>Time</label><input type="time" name="opt4_time" class="form-control-line"></div>
+          </div>
+        </div>
+        <!-- Option #7 -->
+        <div class="date-option-block">
+          <span class="date-option-label">Option #7</span>
           <div class="date-inputs-row">
             <div class="date-field-col"><label>Month</label><input type="text" name="opt5_month" class="form-control-line"></div>
             <div class="date-field-col"><label>Day</label><input type="text" name="opt5_day" class="form-control-line"></div>
