@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japanese Cuisine Blog @ myCarboLoad</title>
+  
+  <!-- Structural Rule 1: Link external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ==========================================================================
+       SAFETY & BLOG PAGE STRUCTURAL LAYOUT & FONT SIZES (THE BONES)
+       Strictly layout, grid/flex structure, spacing, positioning, and font sizes.
+       No font types, color themes, or hardcoded color rules.
+       ========================================================================== */
+
+    /* Default Alignments */
+    p {
+      text-align: justify;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+    img {
+      object-position: center top;
+      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Main Layout Containers */
+    .latest-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 80px 20px;
+    }
+
+    .page-main-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .article-col {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Cards Structure */
+    .article-card {
+      padding: 30px 25px;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .image-frame {
+      margin: 15px 0;
+    }
+
+    .image-frame img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .pr-link {
+      display: block;
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 10px 0 20px 0;
+      text-decoration: underline;
+    }
+
+    .article-action-link {
+      display: block;
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 15px 0;
+      text-decoration: underline;
+    }
+
+    .article-body p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Page-Specific Responsive Layout Breakpoints */
+    @media screen and (max-width: 850px) {
+      .grid-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body class="safety-page">
+
+  <!-- Structural Rule 2: Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT: THE LATEST @ HAWTHORNE -->
+  <main class="latest-container">
+    <h1 class="page-main-title">myCarboLoad Blog</h1>
+    
+    <div class="grid-wrapper">
+      
+      <!-- LEFT COLUMN -->
+      <div class="article-col">
+        <article class="article-card card-light-themed">
+          <h2 class="article-title">The Luscious Taste of Sushi and Its History and Legacy to the Worldwide Palette</h2>
+          
+          <div class="image-frame">
+            <img src="images/the blue pages step 1.png" alt="identity verification">
+          </div>
+          
+          <div class="article-body">
+            <p>Japanese cuisine has been touching Filipinos’ minds and souls for several decades. Because of the inherent complexities of crafting Japanese dishes, Filipino diners rely on restaurants that specialize in Japanese cuisine. Due to the premium tastes of cuisine selections from the Land of the Rising Sun, Filipinos adore the richness of the East Asian country’s culinary heritage that dates back centuries.
+
+
+Contrary to popular belief, sushi did not actually originate in Japan but in China or Southeast Asia. Nare-zushi was the original iteration of the sushi dish we are accustomed to today, where each piece was carefully crafted with fresh white rice and salt-water-cured fish. Instead of incorporating vinegar as the softening agent for nare-zushi, early Asian cooks preferred to take the slow-burn approach in preparing this variant. Specifically, the white rice that came with the sushi itself was fermented for several months but was not consumed, instead being wiped out for consumption. Hence, only the fish portion of the recipe was ingested by consumers.
+
+
+Because of the eventual fast-paced consumer market, chefs had to reinvent the way sushi is made for mass consumers. Hence, nama-narezushi came into the picture for Japanese diners around the 15th century. Nama-nare translates to raw and partially fermented fish in the Japanese language, making this type of fish a universally accepted ingredient for the sushi we consume today. Devoting several months or years for the sake of fully ferment a fish would be a tedious experience to undertake in a fast-paced food business.
+
+
+Long before the Japanese annexed the Philippines following the rise of World War II, the latter actually began trading with Filipinos prior to the Spanish Crown taking over Philippine government affairs. At that time, Japanese traders migrated to major business hubs like Manila and Davao to construct stores and tracts of agricultural land. This very moment paved the way for Filipino diners to be introduced to the rudiments of Japanese cuisine right at the heart of their homeland. But since the Philippines was under Spanish annexation from 1565 until 1898, citizens were deeply embedded with the elements of Spanish culture—including the iconic stone house (natively touted as the bahay na bato), cuisine like paella, and religion via Roman Catholicism.
+
+
+When Japan occupied the Philippines from 1941 until 1945, following the Pearl Harbor bombings, Japanese Imperial Army officials brought a footprint of their own heritage. Along with their own educational system (which eventually did not become ubiquitous post-World War II), nationalistic philosophies, and colonial administration, the Japanese heavily introduced their culinary roots as well. This was where the emergence of deep-fried shrimp pieces (natively coined as tempura), sushi, miso soup, and boneless chicken chunks (natively called karaage) occurred. However, due to the controlling and protective nature of the Imperial Armed Forces over its troops, the Greater East Asia Co-Prosperity Sphere’s colonial master opted to prioritize the subsidized food distribution system for Japanese soldiers only. As expected, quelling the hunger of these soldiers was meant to nourish them with essential nutrients like vitamins and proteins, elements that were vital in performing their wartime functions on Philippine soil. Filipinos from 1941 to 1945 were frequently sidelined in terms of food rationing, leading most of them to yield to the demands of the Japanese armed forces to feed themselves at the expense of others. Due to the import restrictions imposed by the United States and its accompanying countries from the Allied blocs (e.g., Great Britain, France, China, and the former Soviet Union), Japan was constrained to rely on Southeast Asia to acquire the needed ingredients for survival. Hailed as the Asian staple, rice was one of the prime targets for the Japanese to import for their consumption. The carbohydrate component found in rice grains already gave them immense leverage to accede to the demands of their military duties in the field.
+
+</p>
+          </div>
+          <a href="underconstruction.html" class="article-action-link">Read our other Blogs</a>
+          
+          <div class="image-frame">
+            <img src="images/the blue pages step 5.png" alt="professional security">
+          </div>
+        </article>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="article-col">
+        
+        <!-- CARD 1: ACCENT DARK SHADE CARD -->
+        <article class="article-card card-dark-themed">
+          <h2 class="article-title">Sushi Shots</h2>
+          
+          <div class="image-frame">
+            <img src="images/the blue pages step 2.png" alt="negotiating blue collar work">
+          </div>
+          
+          <div class="article-body">
+            <p>Japanese Cuisine </p>
+          </div>
+        </article>
+
+        <!-- CARD 2: LIGHT CARD -->
+        <article class="article-card card-light-themed">
+          <h2 class="article-title">Continue...</h2>
+          
+          <a href="underconstruction.html" class="pr-link">Check our Meal Plans.</a>
+          
+          <div class="article-body">
+            <p>The post-World War II era, apparently, was the renaissance of Japanese cuisine in the Philippines. This was where the advent of beloved Japanese restaurants or food chains like Tokyo Tokyo, Ramen Nagi, Coco Ichibanya, Santouka, and Botejyu happened in the Philippine market. Because of the palatable selections being offered, Filipinos instantly crave the flavors incorporated in Japanese dishes, such as the ones previously enumerated. Established in 1967 right at the heart of Quezon City’s home of the “Big Dome,” the Araneta Center (now the modern-day Araneta City since 2019), Matsuzaka House brought authentic Japanese cuisine to the Filipino mass market. In Philippine restaurant aficionado circles, this particular establishment trailblazed or pioneered the modern Japanese dining experience in the archipelago. After this historic moment, succeeding Japanese restaurants were constructed in the Philippines, aiming to continue this casual yet heritage-centered Asian dining experience. For instance, Tokyo Tokyo made its debut in April 1985 right at Glorietta (which was then coined as the Quad Car Park). Unlike premium Japanese restaurants, this popular chain aims to employ a fast-paced food service system to serve delicious dishes to Filipinos with varying wallet sizes. Tokyo Tokyo branches do employ traditional Japanese motifs within their surroundings, making them conducive for casual diners to be immersed in the East Asian nation’s rich cultural and culinary heritage without compromising their monthly or weekly budgets.</p>
+            <p>Tong Yang is a buffet-type restaurant that offers dishes that predominantly focus on Asian cuisine. This is in stark contrast to Vikings, which specializes in a wide variety of dishes across the globe. Actually, this was where some of my extended family members celebrated the diamond birthday milestone (i.e., 75th birthday) of my maternal grandmother. The photo above prominently features the classic and iconic California Maki variant of the world-famous sushi. It contains a mango piece, which is wrapped with standard white rice, rice vinegar, crab sticks (i.e., kani), and cucumber. When consumed in just a bite, this orange-themed sushi gives out a sweet and savory taste of the mango component. This makes a diner supplement his or her dietary requirements while enjoying his or her dining experience. Other dishes like tempura and miso soup, accompanied by vegetable and meat side dishes, were also offered by the hospitable buffet crew.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Structural Rule 3: Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Structural Rule 4: Script Loader -->
+  <script src="include.js"></script>
+</body>
+</html>
