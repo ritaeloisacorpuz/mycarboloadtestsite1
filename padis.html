@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delectable Mister Donuts and the History of the Multinational Chain</title>
+    
+    <!-- 1. Link External Stylesheet for Look, Colors, Fonts, and Theme -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal Layout, Positioning, Margins, and Font Sizes (Structural Bones) -->
+    <style>
+        /* Structural CSS Reset & Default Rules for Modular Sizing/Layout */
+        p {
+            text-align: justify;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.25rem; line-height: 1.2; }
+        h2 { font-size: 1.5rem; line-height: 1.3; }
+        h3 { font-size: 1.25rem; line-height: 1.4; }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        /* Container & Card Layouts */
+        .blog-container {
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .blog-card {
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 4px;
+            padding: 2.5rem 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .blog-nav {
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Author Metadata */
+        .author-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        /* Ratings & Views Header/Footer */
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .star-icon {
+            font-size: 1rem;
+        }
+
+        /* Social Share & Meta Stats Bar */
+        .share-bar {
+            display: flex;
+            gap: 1.25rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 1.5rem;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+        }
+
+        .meta-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+        }
+
+        .meta-stats-left {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Recent Posts Grid Layout */
+        .recent-posts-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2.5rem 0 1rem 0;
+        }
+
+        .recent-posts-header h3 {
+            margin: 0;
+            text-align: left;
+        }
+
+        .recent-posts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .recent-post-card {
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recent-post-img {
+            width: 100%;
+            height: 180px;
+        }
+
+        .recent-post-body {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .recent-post-title {
+            font-size: 1.05rem;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .recent-post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            padding-top: 0.75rem;
+            border-top-style: solid;
+            border-top-width: 1px;
+        }
+
+        .recent-post-metrics {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        /* Comment & Rating Input Box */
+        .comments-section {
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 4px;
+            padding: 2.5rem 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .comments-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .comments-header h3 {
+            margin: 0;
+            text-align: left;
+        }
+
+        .comment-box {
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 4px;
+            padding: 1.25rem;
+        }
+
+        .add-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .comment-input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 0.95rem;
+            resize: vertical;
+            min-height: 60px;
+            background: transparent;
+        }
+
+        /* Tablet & Mobile Adjustments */
+        @media (max-width: 768px) {
+            .blog-card, .comments-section {
+                padding: 1.5rem 1.25rem;
+            }
+            .recent-posts-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 1.75rem; }
+            h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 2. Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Container -->
+    <main class="blog-container">
+        
+        <div class="blog-nav">
+            <a href="#" class="nav-link">All Posts</a>
+        </div>
+
+        <!-- Main Article Container -->
+        <article class="blog-card">
+            
+            <!-- Author Header -->
+            <div class="author-bar">
+                <div class="author-info">
+                    <img src="https://via.placeholder.com/40" alt="Eloisa Corpuz" class="author-avatar">
+                    <span>Eloisa Corpuz &bull; Aug 20 &bull; 2 min read</span>
+                </div>
+                <button class="icon-btn" aria-label="More options">&#8942;</button>
+            </div>
+
+            <!-- Title -->
+            <h1>Delectable Mister Donuts and the History of the Multinational Chain</h1>
+
+            <!-- Rating -->
+            <div class="rating-bar">
+                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span>No ratings yet</span>
+            </div>
+
+            <!-- Content -->
+            <p>Together with Dunkin’ Donuts and Krispy Kreme, Mister Donut remains one of the most admired and revered doughnut chains in the Philippines and in other parts of the planet. This prominent name in coffee and well-doughed pieces of bread with creamy fillings was established in 1955 by Harry Winouker—Bill Rosenberg’s (Dunkin’ Donuts’ founder) brother-in-law, via his first wife, Bertha Greenberg—right at the heart of Boston, Massachusetts. Mister Donut’s advent to the dessert market emerged when both Rosenberg and Winouker engaged in a heated argument that resulted in the severance of ties in terms of running Dunkin’ Donuts’ regular operations. Hence, he founded the Mister Donut empire in Boston and replicated Rosenberg’s model of offering doughnuts and cups of coffee to a variety of customers, including professionals affiliated with companies around the metropolis. This concept paved the way for Mister Donut to stand toe-to-toe with the other two pastry companies in the United States and beyond. This commitment to standing on its own in a competitive bakery landscape contributes to the longevity and customer loyalty it commands today.</p>
+<p>Twenty-seven years later, in 1982, Mister Donut made its Philippine market presence possible along the bustling Recto Avenue in Manila. Interestingly, this penetration occurred just a year after Dunkin’ Donuts and McDonald’s commenced their operations in Makati City and Manila, respectively. In a way, Mister Donut ambitioned to position itself as an effective competitor to Dunkin’ Donuts by serving coffee, hot chocolate, and frappuccino cups to Filipino customers across various areas in the archipelago. When 1995 came into fruition, Ramcar (the manufacturer behind Motolite’s elite car battery lines) acquired a major stake in the doughnut company’s operations. This initiative alone allowed Motolite to expand its brand portfolio beyond offering batteries that power the internal components of public and private vehicles in the Philippines. Radios and air-conditioning units are prime examples of machines that Motolite’s batteries and its rivals provide sufficient energy for.</p>
+            <p>Mister Donut’s prominent regular and chocolate Bavarian-filled doughnuts are shown in the left column of the above photo. Both contain cream fillings that are stuffed within their interiors to provide that satisfying taste and smooth texture in a customer’s mouth. On the one hand, their exteriors are dressed with dashes of sugar for the sweet aspect of the bread pieces themselves to shine. The opposite column features the lengthwise chocolate doughnut, coined the Premium Twist. In particular, this variant is dressed with sugar and outlined by chocolate sauce to give that hint of sweet and tempting taste. Other Premium Twist doughnuts available nationwide are rocky road/chocolate marshmallows, full chocolate nibs, ultimate chocolate, and peanut butter-strawberry. Smidgets and Donuts & Dip are the other product lines that Mister Donut offers to Filipino customers. The former denotes the bite-sized doughnut pieces, which intentionally compete with Dunkin’ Donuts’ Munchkins.
+
+</p>
+            <p>In the Philippine context, Mister Donut sells its doughnuts, beverages, and savory meals nationwide through its standalone stores, in-mall branches, and 7-Eleven trays. Notably, the prominent convenience store brand 7-Eleven has been partnering with Mister Donut. This enduring collaboration makes offering the doughnut chain’s pastry lines possible.</p>
+            <!-- Social Sharing -->
+            <div class="share-bar">
+                <a href="#" class="social-icon" aria-label="Share on Facebook">f</a>
+                <a href="#" class="social-icon" aria-label="Share on X">X</a>
+                <a href="#" class="social-icon" aria-label="Share on LinkedIn">in</a>
+                <a href="#" class="social-icon" aria-label="Copy link">&#128279;</a>
+            </div>
+
+            <!-- Post Footer Meta -->
+            <div class="meta-stats">
+                <div class="meta-stats-left">
+                    <span>5 views</span>
+                    <span>0 comments</span>
+                </div>
+                <div>
+                    <button class="like-btn" aria-label="Like post">&#9825;</button>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- Recent Posts Section -->
+        <section>
+            <div class="recent-posts-header">
+                <h3>Recent Posts</h3>
+                <a href="#" class="nav-link">See All</a>
+            </div>
+
+            <div class="recent-posts-grid">
+                <!-- Card 1 -->
+                <article class="recent-post-card">
+                    <img src="https://via.placeholder.com/300x180" alt="Outsourced Market Research" class="recent-post-img">
+                    <div class="recent-post-body">
+                        <h4 class="recent-post-title">The Financial Benefits of Outsourced Market Research</h4>
+                        <div class="recent-post-footer">
+                            <div class="recent-post-metrics">
+                                <span>&#128065; 3</span>
+                                <span>&#128172; 0</span>
+                            </div>
+                            <button class="like-btn" aria-label="Like">&#9825;</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="recent-post-card">
+                    <img src="https://via.placeholder.com/300x180" alt="Ad Hoc Projects" class="recent-post-img">
+                    <div class="recent-post-body">
+                        <h4 class="recent-post-title">Why Ad Hoc Projects Are Best Outsourced to...</h4>
+                        <div class="recent-post-footer">
+                            <div class="recent-post-metrics">
+                                <span>&#128065; 3</span>
+                                <span>&#128172; 0</span>
+                            </div>
+                            <button class="like-btn" aria-label="Like">&#9825;</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="recent-post-card">
+                    <img src="https://via.placeholder.com/300x180" alt="Grow Business Product" class="recent-post-img">
+                    <div class="recent-post-body">
+                        <h4 class="recent-post-title">How to Grow your Business through Product...</h4>
+                        <div class="recent-post-footer">
+                            <div class="recent-post-metrics">
+                                <span>&#128065; 2</span>
+                                <span>&#128172; 0</span>
+                            </div>
+                            <button class="like-btn" aria-label="Like">&#9825;</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Comments Section -->
+        <section class="comments-section">
+            <div class="comments-header">
+                <h3>Comments</h3>
+                <div class="rating-bar" style="margin-bottom:0;">
+                    <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span>No ratings yet</span>
+                </div>
+            </div>
+
+            <div class="comment-box">
+                <div class="add-rating">
+                    <span>Add a rating</span>
+                    <span class="star-rating">&#9734;&#9734;&#9734;&#9734;&#9734;</span>
+                </div>
+                <textarea class="comment-input" placeholder="Write a comment..."></textarea>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 3. Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- 4. Loader Script -->
+    <script src="include.js"></script>
+
+</body>
+</html>
