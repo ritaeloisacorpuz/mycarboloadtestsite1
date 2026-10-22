@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety & Nego Tips @ The Blue Pages</title>
+  
+  <!-- Structural Rule 1: Link external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ==========================================================================
+       SAFETY & BLOG PAGE STRUCTURAL LAYOUT & FONT SIZES (THE BONES)
+       Strictly layout, grid/flex structure, spacing, positioning, and font sizes.
+       No font types, color themes, or hardcoded color rules.
+       ========================================================================== */
+
+    /* Default Alignments */
+    p {
+      text-align: justify;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+    img {
+      object-position: center top;
+      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Main Layout Containers */
+    .latest-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 80px 20px;
+    }
+
+    .page-main-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .article-col {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Cards Structure */
+    .article-card {
+      padding: 30px 25px;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .image-frame {
+      margin: 15px 0;
+    }
+
+    .image-frame img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .pr-link {
+      display: block;
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 10px 0 20px 0;
+      text-decoration: underline;
+    }
+
+    .article-action-link {
+      display: block;
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 15px 0;
+      text-decoration: underline;
+    }
+
+    .article-body p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Page-Specific Responsive Layout Breakpoints */
+    @media screen and (max-width: 850px) {
+      .grid-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body class="safety-page">
+
+  <!-- Structural Rule 2: Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT: THE LATEST @ HAWTHORNE -->
+  <main class="latest-container">
+    <h1 class="page-main-title">Safety & Nego Tips</h1>
+    
+    <div class="grid-wrapper">
+      
+      <!-- LEFT COLUMN -->
+      <div class="article-col">
+        <article class="article-card card-light-themed">
+          <h2 class="article-title">Smart, Safe Tips on Choosing a Worker</h2>
+          
+          <div class="image-frame">
+            <img src="images/the blue pages step 1.png" alt="identity verification">
+          </div>
+          
+          <div class="article-body">
+            <p>Hiring contractors to work in your home requires taking deliberate steps to protect your household's physical security, financial interest, and personal safety. Here are the smartest strategies to ensure a secure repair process.</p>
+            <p><strong>1. Verify Credentials and Insurance</strong><br>Never allow work to begin without confirming the contractor’s license, bonding, and liability insurance. Request proof of workers' compensation insurance directly from their provider. If an uninsured worker is injured on your property, you could be held financially liable for medical bills or lost wages.</p>
+            <p><strong>2. Establish Boundaries and Secure Valuables</strong><br>Before work begins, define the designated work zone and keep the rest of your home off-limits. Lock away cash, sensitive personal documents, prescription medications, small electronics, and jewelry in a safe or a locked room. Restrict contractor access strictly to the areas necessary to complete the job.</p>
+            <p><strong>3. Set Clear Communication and House Rules</strong><br>Set ground rules early regarding arrival times, parking, bathroom usage, and smoking on the property. Obtain the names and contact details of all crew members who will be on-site, including the project manager. Avoid hiring contractors who insist on unscheduled visits or bring unauthorized additional workers.</p>
+            <p><strong>4. Protect Kids, Pets, and Work Areas</strong><br>Construction sites contain hazardous tools, exposed wiring, and chemical fumes. Keep children and pets entirely away from active work areas using baby gates or closed doors. Ensure adequate ventilation in rooms where paints, adhesives, or heavy machinery are being used.</p>
+            <p><strong>5. Keep Financial Control</strong><br>Maintain leverage by following a structured payment plan linked to project milestones. Never pay the full balance upfront or hand over cash without a signed receipt and formal contract. Withholding the final payment until you perform a thorough walk-through ensures all work meets safety standards and project specifications.</p>
+          </div>
+          
+          <a href="under construction.html" class="article-action-link">Check List of Private Investigators</a>
+          
+          <div class="image-frame">
+            <img src="images/the blue pages step 5.png" alt="professional security">
+          </div>
+        </article>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="article-col">
+        
+        <!-- CARD 1: ACCENT DARK SHADE CARD -->
+        <article class="article-card card-dark-themed">
+          <h2 class="article-title">Smart Negotiating</h2>
+          
+          <div class="image-frame">
+            <img src="images/the blue pages step 2.png" alt="negotiating blue collar work">
+          </div>
+          
+          <div class="article-body">
+            <p>Negotiate the best price while getting top quality craftsmanship.</p>
+          </div>
+        </article>
+
+        <!-- CARD 2: LIGHT CARD -->
+        <article class="article-card card-light-themed">
+          <h2 class="article-title">How to Get the Best Price for Top Talent</h2>
+          
+          <a href="directory.html" class="pr-link">Check The Blue Pages Directory here.</a>
+          
+          <div class="article-body">
+            <p>Negotiating home repair work can feel daunting, but approaching contractors with a strategic, well-prepared mindset ensures you get quality craftsmanship at a fair price. Here are the smartest tips to master your next negotiation.</p>
+            <p><strong>1. Do Your Homework First</strong><br>Before reaching out to professionals, research the typical costs for your specific repair in your area. Get at least three detailed quotes from licensed, reputable contractors. Having a clear baseline allows you to spot outliers—both dangerously cheap estimates and inflated quotes—giving you leverage during discussions.</p>
+            <p><strong>2. Request Itemized Estimates</strong><br>Never settle for a single lump-sum total. Ask contractors to break down the quote into materials, labor, permits, and equipment rentals. An itemized proposal makes it easy to negotiate specific lines, such as opting for mid-tier materials instead of premium ones or adjusting the project scope to fit your budget.</p>
+            <p><strong>3. Offer Flexibility in Timing</strong><br>Contractors often experience seasonal lulls or sudden gaps in their schedules due to delayed projects. If your repair isn’t an immediate emergency, let the contractor know your schedule is flexible. Offering to let them fit your job in during slow periods or between bigger projects can often net you a significant discount.</p>
+            <p><strong>4. Bundle or Streamline Tasks</strong><br>If you have multiple small repairs needed around the house, bundle them together into one job. Contractors prefer larger, single-site jobs because it saves them travel time and setup costs. Negotiate a package rate for tackling several issues at once rather than hiring someone for isolated quick fixes.</p>
+            <p><strong>5. Leverage Payment Terms, Not Just Price</strong><br>If a contractor won't budge on the total price, negotiate the payment structure instead. Never pay the full amount upfront. Offer a reasonable deposit (typically 10% to 30%) and link subsequent payments to clear, measurable completion milestones. Retaining the final payment until you inspect and approve the finished work ensures quality and keeps leverage in your hands.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Structural Rule 3: Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Structural Rule 4: Script Loader -->
+  <script src="include.js"></script>
+</body>
+</html>
