@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japanese Cuisine Blog @ myCarboLoad</title>
+  
+  <!-- Structural Rule 1: Link external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ==========================================================================
+       SAFETY & BLOG PAGE STRUCTURAL LAYOUT & FONT SIZES (THE BONES)
+       Strictly layout, grid/flex structure, spacing, positioning, and font sizes.
+       No font types, color themes, or hardcoded color rules.
+       ========================================================================== */
+
+    /* Default Alignments */
+    p {
+      text-align: justify;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+    img {
+      object-position: center top;
+      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Main Layout Containers */
+    .latest-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 80px 20px;
+    }
+
+    .page-main-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .article-col {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Cards Structure */
+    .article-card {
+      padding: 30px 25px;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .image-frame {
+      margin: 15px 0;
+    }
+
+    .image-frame img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .pr-link {
+      display: block;
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 10px 0 20px 0;
+      text-decoration: underline;
+    }
+
+    .article-action-link {
+      display: block;
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 15px 0;
+      text-decoration: underline;
+    }
+
+    .article-body p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Page-Specific Responsive Layout Breakpoints */
+    @media screen and (max-width: 850px) {
+      .grid-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body class="safety-page">
+
+  <!-- Structural Rule 2: Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT: THE LATEST @ HAWTHORNE -->
+  <main class="latest-container">
+    <h1 class="page-main-title">myCarboLoad Blog</h1>
+    
+    <div class="grid-wrapper">
+      
+      <!-- LEFT COLUMN -->
+      <div class="article-col">
+        <article class="article-card card-light-themed">
+          <h2 class="article-title">Crave Cacao and the Roots of the Philippine Chocolate Industry</h2>
+          
+          <div class="image-frame">
+            <img src="images/the blue pages step 1.png" alt="identity verification">
+          </div>
+          
+          <div class="article-body">
+            <p>Bars and chips of chocolate have been part of the sugary palette of Filipinos and non-Filipinos for decades. They are often consumed after one’s main course meal is over, but with reasonable dietary limits to prevent health complications—notably diabetes—from occurring. Consumers, at least once in their lives, have encountered purchasing and ingesting these confectionery products out of pleasure. Meanwhile, others prefer to offer these chocolate bars and cookies as a sign of appreciation and love for colleagues, family members, and friends. Products like the Philippines’ very own Ricoa Flat Tops (manufactured by Comfoods) and Jack & Jill Nips (owned by Universal Robina Corporation, a subsidiary under the John Gokongwei Jr. Group); the United States’ Hershey’s, M&M’s, and Reese’s; Japan’s Meiji and Glico (the producer of Pocky flavor-coated sticks); and Switzerland’s Lindt dominate the cocoa landscape of the planet. These companies regularly rake in millions in revenue generated from consumer sales in various countries.
+
+</p>
+            <p>One may wonder how chocolate came into the picture in the global landscape. Contrary to what many people believe, chocolate did not begin as a sweet tooth remedy for consumers. Actually, it gained traction as a bean, specifically from a cacao tree. It wasn’t originally produced in the Philippines or in Switzerland, but in Latin America. For a farmer to produce real cocoa beans, he has to evaporate the liquid components (particularly water) from the beans’ surfaces and roast them into ripe beans. This procedure functions similarly to coffee beans, where they are initially picked by farmers and then processed accordingly into beans. After this rigorous process, these beans undergo necessary polishing procedures, the very components that manufacture the chocolate bars and coffee powders we frequently come across on market shelves in many parts of the world.</p>
+            <p>In the Philippine context, chocolate arrived in this Southeast Asian archipelago during the height of the Manila-Acapulco Galleon Trade in 1670. As discussed earlier, Latin America (particularly in Mexico) was the originating point of international chocolate production on a grassroots level. In effect, the long-travelled ships travelling from Mexico to the Philippines paved the path for succeeding Filipino generations to reap the joys of chocolate bars and chip cookies. Other than cacao beans, Mexican traders exported agricultural products like mangoes and avocado as a way to mold Filipino appetites to be trained to consume healthy meals called whole foods. From a historical standpoint, the Galleon Trade system served as one of the early blueprints of the Philippine import-export system that is widely utilized when interacting with various economies like the United States, Japan, China, and even the European Union.
+              <p>For a common Filipino, Crave Cacao may seem to be a novel brand name in the Philippine chocolate market. It is not as mainstream as Toblerone, Cadbury, and Hershey’s, but it denotes the beauty of the local cacao landscape from the provinces. If one spends a fraction of their time analyzing the name's intent, it resonates with how Filipinos, and even foreign tourists, maintain a deep affinity for chocolates as long-standing endorphins in their lives. In biology, endorphins are brain-produced hormones that are intended to evoke pleasure and relieve pain.
+
+</p>
+          </div>
+          <a href="underconstruction.html" class="article-action-link">Read our other Blogs</a>
+          
+          <div class="image-frame">
+            <img src="images/the blue pages step 5.png" alt="professional security">
+          </div>
+        </article>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="article-col">
+        
+        <!-- CARD 1: ACCENT DARK SHADE CARD -->
+        <article class="article-card card-dark-themed">
+          <h2 class="article-title">Cacao Shots</h2>
+          
+          <div class="image-frame">
+            <img src="images/the blue pages step 2.png" alt="negotiating blue collar work">
+          </div>
+          
+          <div class="article-body">
+            <p>Chocolate Craze </p>
+          </div>
+        </article>
+
+        <!-- CARD 2: LIGHT CARD -->
+        <article class="article-card card-light-themed">
+          <h2 class="article-title">Continue...</h2>
+          
+          <a href="underconstruction.html" class="pr-link">Crave cacao </a>
+          
+          <div class="article-body">  
+            <p>Having found its conception in 2019 at the heart of Camarines Sur in the Bicol Region, Crave Cacao champions the traditional method of chocolate production. Specifically, it produces its chocolate bars from scratch through the prominent cacao tree. The brand’s founder, Lala Ouradik, leveraged her passion for grassroots cacao generation in Calabanga, Camarines Sur, where her very own Crave Cacao Orchard is situated. For her, coordinating with farmers specializing in cultivating cacao beans provides her with first-hand experience on how chocolate bars are polished through rigorous steps before stacking them on our grocery shelves. Outside of the confines of well-polished chocolate factories like those of Hershey’s, Lindt, and even Willy Wonka, Crave Cacao intends to open the gateways to the rural-centered and grit-driven way of chocolate production.</p>
+            <p>The above photos feature a wide array of the Bicolano chocolate manufacturer’s flavor line containing varying milk and dark chocolate content. They range from as low as 42% (for milk chocolate variants only) to as high as 95% (for dark chocolate flavors only). Notably, I held two packets of Crave Cacao’s dark choco chip flavors with more than 50% dark chocolate content: one with the standard or regular 70% proportion (top) and the other with a 64% content with refreshing peppermint taste (middle). As the principle of direct proportion dictates, the value increase of Variable X influences the rise of Variable Y. The same applies to the relationship between dark chocolate content and the bitterness level of one bar. What makes the 95% dark chocolate variant relatively unique is its peppermint flavor, which enhances one’s breath freshness.</p>
+            <p>The World Food Expo 2026 Committee hosted its very own exhibit from April 17 to 19, 2026. It successfully featured a variety of products that range from edible items (e.g., Indian spices, Kokola choco chip cookies, Dubai ice cream) to industrial-grade appliances (e.g., gas ranges, blenders, emulsifiers). As soon as I approached the Crave Cacao section, I immediately looked at the selections and wondered about the chocolate proportion/content of each variant. When I learned that I could taste samples of the chocolate chips displayed, I did not hesitate to munch several pieces to satisfy my cravings for confectionery goods. Compared to the regular dark chocolate flavor, its mint counterpart did not fail to provide a space for freshening my breath through its peppermint oil. This instance made me remember chewing Tic Tac, Xylitol (notably from Japan), or Lindt candies and chocolates (respectively) back in the day.
+
+</p>
+            <p>As discussed, chocolates are essential relievers from life stressors, making them the ultimate endorphine sources of our lives beyond our years on Earth.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Structural Rule 3: Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Structural Rule 4: Script Loader -->
+  <script src="include.js"></script>
+</body>
+</html>
