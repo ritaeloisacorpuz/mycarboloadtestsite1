@@ -141,11 +141,13 @@
       text-align: left;
     }
     .card img {
-      width: 100%;
-      height: 200px;
-      border-radius: 2px;
-      margin-bottom: 15px;
-    }
+  width: 100%;
+  aspect-ratio: 1 / 1;       /* Forces the container to be a perfect 1:1 square */
+  object-fit: contain;       /* Displays the entire logo without cropping edges */
+  object-position: center;   /* Centers the logo image inside the box */
+  margin: 0 auto 15px auto;  /* Centers the box within the column */
+  display: block;
+}
     .card h3 {
       font-size: 2.10rem;
       font-weight: 700;
