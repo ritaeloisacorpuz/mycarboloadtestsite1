@@ -15,10 +15,12 @@
       gap: 10px;
     }
     .logo-img {
-      max-height: 55px;
-      width: auto;
-      display: block;
-    }
+  width: 55px;          /* Sets exact equal width & height */
+  height: 55px;
+  border-radius: 50%;   /* Turns the square into a circle */
+  object-fit: cover;    /* Prevents the image from stretching */
+  display: block;
+}
     .main-nav {
       margin: 0 auto;
     }
