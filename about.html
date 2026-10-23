@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
   
-  <!-- Structural Rule 1: Link external stylesheet for themes, fonts, colors, and global responsiveness -->
+  <!-- Structural Rule 1: Link external stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
   <style>
     /* ============================================================
        STRUCTURAL & LAYOUT CSS ("Bones" of the About Us Page)
-       Contains layout, grid/flex structure, spacing, positioning,
-       margins, paddings, display modes, and font sizes.
        ============================================================ */
 
     /* Default Alignments */
@@ -23,7 +21,7 @@
       text-align: center;
     }
     img {
-      object-position: center top;
+      object-position: center;
       object-fit: cover;
       max-width: 100%;
       height: auto;
@@ -114,15 +112,25 @@
       flex-direction: column;
     }
 
+    /* FIXED LOGO CONTAINER */
     .brand-photo-wrap {
       width: 100%;
       height: 220px;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      background-color: #ffffff;
+      box-sizing: border-box;
     }
 
+    /* FIXED LOGO FITTING */
     .brand-photo-wrap img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
+      object-position: center;
     }
 
     .brand-card-body {
@@ -225,17 +233,19 @@
           <img src="images/healthy-spaghetti.jpg" alt="healthy-spaghetti">
         </div>
         <div class="about-split-text">
-          <h3>This is what we do </h3>
+          <h3>This is what we do</h3>
           <p>
             At Functional Foods, we deliver customized culinary solutions engineered to elevate your daily performance.
           </p>
           <p>
             Our first specialized line, CarboLoad, supplies immense stamina for exceptionally demanding schedules by combining massive carbohydrate reserves with adequate protein meant for rapid muscle recovery. These highly portable meals completely prevent midday fatigue crashes, ensuring peak endurance whether you are hiking dense forest trails, competing in grueling athletic tournaments, or navigating extensive highway commutes.
           </p>
-          </p>Next, BrainFood targets unparalleled mental acuity by utilizing specific, complex proteins that are absolutely crucial for elevated neurological performance. Rather than relying on simple sugars, these specific recipes supply your mind with targeted nutrients designed to maximize profound focus during rigorous academic lectures or intensive intellectual workloads at the office.</p>
-          </p>Finally, NutriKitchen proves that wholesome eating remains incredibly appetizing. You can confidently enjoy massive, guilt-free portions safely tailored for strict weight management and specific medical conditions. By rigorously eliminating artificial preservatives, heavy sodium, and refined sugars, we provide deeply savory options ideal for seniors, diabetic relatives, or fitness-minded companions. Explore our performance-driven menu today and discover exactly why our dishes taste absolutely magnificent!</p>
-          
-         
+          <p>
+            Next, BrainFood targets unparalleled mental acuity by utilizing specific, complex proteins that are absolutely crucial for elevated neurological performance. Rather than relying on simple sugars, these specific recipes supply your mind with targeted nutrients designed to maximize profound focus during rigorous academic lectures or intensive intellectual workloads at the office.
+          </p>
+          <p>
+            Finally, NutriKitchen proves that wholesome eating remains incredibly appetizing. You can confidently enjoy massive, guilt-free portions safely tailored for strict weight management and specific medical conditions. By rigorously eliminating artificial preservatives, heavy sodium, and refined sugars, we provide deeply savory options ideal for seniors, diabetic relatives, or fitness-minded companions. Explore our performance-driven menu today and discover exactly why our dishes taste absolutely magnificent!
+          </p>
         </div>
       </div>
     </section>
@@ -291,6 +301,7 @@ Unlike carbohydrates or sugar, protein is a complex molecule. There are many typ
 
 Nutritious is delicious, at least in NutriKitchen. Indulge and eat as much as you want of these delicious and healthy dishes without gaining excess weight. Each meal is carefully put together with a careful eye out against excess sugar, unnecessary sodium and unwanted preservatives. Flavorful without being sinful, you can eat as much a generous serving as you want without having to worry about weight gain or your medical condition.
 Order NutriKitchen dishes for your elders, diabetic relatives or simply for your health-conscious husband. If your best friend is watching her weight, best to include her in the list as well !
+            </p>
           </div>
         </div>
       </div>
