@@ -59,10 +59,12 @@
     }
 
     .hero-title-logo {
-      height: 3.5rem; /* Matches the h1 font size height */
-      width: auto;
-      display: block;
-    }
+  height: 5.5rem;            /* Increased to match the 5.5rem h1 text size */
+  width: 5.5rem;             /* Fixed equal width for a true square/circle */
+  object-fit: cover;         /* Prevents image stretching */
+  border-radius: 50%;        /* Turns the square image into a perfect circle */
+  display: block;
+}
 
     .hero h1 {
       font-size: 5.5rem;
