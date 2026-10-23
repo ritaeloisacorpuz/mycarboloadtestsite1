@@ -1,3 +1,654 @@
+/* ==========================================
+   GLOBAL RESET & THEMING (styles.css)
+   ========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body Styling & Theme Colors */
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+  background-color: #E5F7AF; /* Lemon Green */
+  color: #263149;           /* Dark Shade */
+  line-height: 1.5;
+}
+
+/* Default Alignments */
+p {
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+img {
+  object-position: center top;
+  object-fit: cover;
+}
+
+/* Buttons, Links, & Interactive Element Styling */
+a {
+  color: #263149;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+.button, button {
+  background-color: #263149;
+  color: #E5F7AF;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover, button:hover {
+  opacity: 0.85;
+}
+
+/* Utility Theme Classes */
+.lemon-bg {
+  background-color: #E5F7AF;
+  color: #263149;
+}
+
+.dark-bg {
+  background-color: #263149;
+  color: #E5F7AF;
+}
+
+.dark-bg a {
+  color: #E5F7AF;
+}
+
+/* ==========================================
+   GLOBAL RESPONSIVENESS (All Gadgets)
+   ========================================== */
+
+@media screen and (max-width: 1024px) {
+  /* iPad / Tablet layout adjustments */
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile Phone & Kindle portrait adjustments */
+  .site-header {
+    flex-direction: column !important;
+  }
+  .main-nav ul {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .features-bar {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .destinations-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ==========================================
+   ADDITIONAL COMPONENT THEMING (styles.css)
+   ========================================== */
+
+/* Input Controls & Textareas */
+.form-control {
+  background-color: #ffffff;
+  color: #263149;
+  border: 1px solid rgba(38, 49, 73, 0.25);
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #263149;
+  box-shadow: 0 0 0 2px rgba(38, 49, 73, 0.15);
+}
+
+/* Icons, Cards & Decorative Elements */
+.icon-box {
+  color: #263149;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(38, 49, 73, 0.2);
+}
+
+.read-more {
+  color: #263149;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  opacity: 0.75;
+}
+
+/* Button & Link Hover Effects */
+.btn-pill, 
+.btn-send, 
+.btn-submit-main, 
+.btn-submit-secondary, 
+.btn-upload-teal {
+  background-color: #263149;
+  color: #E5F7AF;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-pill:hover, 
+.btn-send:hover, 
+.btn-submit-main:hover, 
+.btn-submit-secondary:hover, 
+.btn-upload-teal:hover {
+  opacity: 0.85;
+}
+/* ==========================================
+   ADDITIONAL PAYMENT PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Form Control Theming */
+.form-control {
+  background-color: #FFFFFF;
+  color: #263149;
+  border: 1px solid rgba(38, 49, 73, 0.3);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #263149;
+}
+
+/* Section & Step Dividers Theming */
+.section-divider {
+  background: rgba(38, 49, 73, 0.15);
+}
+
+.step-block {
+  border-bottom: 1px solid rgba(38, 49, 73, 0.15);
+}
+
+/* Upload Button Styling Override */
+.btn-upload-teal {
+  background-color: #263149;
+  color: #E5F7AF;
+}
+
+/* Payment Form Responsiveness Adjustments */
+@media screen and (max-width: 768px) {
+  .order-form-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+/* ==========================================
+   ADDITIONAL BLOG PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Blog Video Hero Play Button */
+.play-button {
+  background-color: #263149;
+  color: #E5F7AF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Destination Cards Overlay Theming */
+.destination-card .overlay {
+  background: rgba(38, 49, 73, 0.45);
+}
+
+.destination-card h3 {
+  color: #E5F7AF;
+}
+
+/* Guide Card Caption Subtext Color */
+.guide-card p {
+  opacity: 0.8;
+}
+
+/* Blog Responsive Grid Adjustments */
+@media screen and (max-width: 768px) {
+  .destinations-grid, 
+  .guides-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ==========================================
+   ADDITIONAL GENERIC PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Generic Card & Package Border Styling */
+.package-card {
+  background-color: transparent;
+}
+
+/* Icon Box Color Theming */
+.promo-details-grid-section .icon-box {
+  color: #263149;
+}
+
+/* Social Icons Links Styling */
+.social-icons a {
+  color: #E5F7AF;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover {
+  opacity: 0.75;
+}
+
+/* Dark Section Form Controls Theming Override */
+.dark-bg .form-control {
+  background-color: #FFFFFF;
+  color: #263149;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-bg .form-control:focus {
+  border-color: #E5F7AF;
+  box-shadow: 0 0 0 2px rgba(229, 247, 175, 0.3);
+}
+
+.dark-bg .btn-send {
+  background-color: #E5F7AF;
+  color: #263149;
+}
+
+.dark-bg .btn-send:hover {
+  opacity: 0.9;
+}
+/* ==========================================
+   ORDER / BOOKING PAGE THEMING (styles.css)
+   ========================================== */
+
+/* Booking Card Background & Shadow */
+.form-card-bg {
+  background-color: #ffffff;
+  color: #263149;
+  border: 1px solid rgba(38, 49, 73, 0.15);
+  box-shadow: 0 4px 20px rgba(38, 49, 73, 0.08);
+}
+
+/* Underline Form Fields Line Color */
+.form-control-line {
+  border-bottom: 1.5px solid #263149;
+  color: #263149;
+}
+
+.form-control-line:focus {
+  border-bottom-color: #263149;
+  box-shadow: 0 2px 0 0 rgba(38, 49, 73, 0.2);
+}
+
+/* Form Submit Button Theme */
+.btn-submit-pill {
+  background-color: #263149;
+  color: #E5F7AF;
+  border: 1.5px solid #263149;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-submit-pill:hover {
+  background-color: #E5F7AF;
+  color: #263149;
+  opacity: 0.9;
+}
+
+/* Instruction Step Divider Line Theme */
+.step-item {
+  border-bottom: 1px solid rgba(38, 49, 73, 0.2);
+}
+/* ==========================================
+   HEADER & FOOTER COLOR THEMING (#263149 / #E5F7AF)
+   ========================================== */
+
+/* Header Theme */
+.site-header {
+  background-color: #263149 !important;
+  color: #E5F7AF !important;
+  border-bottom: 1px solid rgba(229, 247, 175, 0.2) !important;
+}
+
+.site-header a,
+.main-nav a {
+  color: #E5F7AF !important;
+}
+
+.main-nav a:hover {
+  opacity: 0.8;
+}
+
+/* Footer Theme */
+footer.site-footer {
+  background-color: #263149 !important;
+  color: #E5F7AF !important;
+  border-top: 1px solid rgba(229, 247, 175, 0.2) !important;
+}
+
+footer.site-footer h4,
+footer.site-footer p,
+footer.site-footer small,
+footer.site-footer ul li {
+  color: #E5F7AF !important;
+}
+
+footer.site-footer a {
+  color: #E5F7AF !important;
+}
+
+footer.site-footer a:hover {
+  opacity: 0.8;
+}
+
+/* Divider Line Color Override for Footer */
+footer.site-footer hr.footer-divider {
+  border-top: 1px solid rgba(229, 247, 175, 0.25) !important;
+}
+/* Force horizontal wrapping menu layout on mobile */
+@media screen and (max-width: 991px) {
+  /* Target common header/navigation container selectors */
+  header nav,
+  header nav ul,
+  header .menu,
+  header .nav,
+  header .nav-menu,
+  .site-header nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px 16px !important;
+    width: 100% !important;
+    padding: 10px 15px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Force menu items to shrink-wrap their content */
+  header nav li,
+  header nav ul li,
+  header .menu li,
+  header .nav-menu li {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 1 auto !important;
+    margin: 0 !important;
+  }
+
+  /* Prevent link text from wrapping onto two lines individually */
+  header nav a,
+  header nav ul li a,
+  header .menu a,
+  header .nav-menu a {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    width: auto !important;
+  }
+}
+/* ==========================================
+   ADDITIONAL CAREER PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Hero Outer Card Background */
+.career-hero-card {
+  background-color: #FAFAF2;
+  border: 1px solid rgba(38, 49, 73, 0.08);
+}
+
+/* Button Theming for Career Hero */
+.btn-primary-action {
+  background-color: #263149;
+  color: #E5F7AF !important;
+  border: 1.5px solid #263149;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary-action:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary-action {
+  background-color: transparent;
+  color: #263149 !important;
+  border: 1.5px solid #263149;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn-secondary-action:hover {
+  background-color: #263149;
+  color: #E5F7AF !important;
+}
+
+/* Light Action Button (Used inside dark background sections) */
+.btn-light-action {
+  background-color: #FFFFFF;
+  color: #263149 !important;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+.btn-light-action:hover {
+  opacity: 0.9;
+}
+
+/* Section Line Divider Color Theme */
+.section-divider-line {
+  background-color: #263149;
+}
+
+/* Experience List Links Underline Styling */
+.experience-footer-link a {
+  color: #E5F7AF;
+  text-decoration: underline;
+}
+
+.recommendations-section {
+  background-color: #FFFFFF;
+}
+
+.recommender-card a {
+  color: #263149;
+}
+
+/* Ensures layout responsive rules inherit mobile/tablet container width limits */
+@media screen and (max-width: 768px) {
+  .section-wrapper {
+    padding: 25px 15px;
+  }
+}
+/* ==========================================
+   ADDITIONAL ABOUT PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Hero Outer Card Background & Borders */
+.hero-about-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(38, 49, 73, 0.08);
+}
+
+/* Section Headings Color Accents */
+.about-main-container h1,
+.about-main-container h2,
+.about-main-container h3,
+.brand-category {
+  color: #263149;
+}
+
+/* Accent Line Divider Color */
+.short-accent-line {
+  background-color: #263149;
+}
+
+/* Food Brands Section Theming */
+.food-brands-section {
+  background-color: rgba(38, 49, 73, 0.04);
+}
+
+.brand-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(38, 49, 73, 0.12);
+  box-shadow: 0 4px 15px rgba(38, 49, 73, 0.05);
+}
+
+.brand-card-body {
+  background-color: #263149;
+  color: #E5F7AF;
+}
+
+.brand-card-body h3,
+.brand-card-body .brand-category {
+  color: #E5F7AF;
+}
+
+.brand-card-body p {
+  color: #E5F7AF;
+}
+
+/* Contact Card White Container Theming */
+.contact-card-white {
+  background-color: #FFFFFF;
+  color: #263149;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-label {
+  color: rgba(38, 49, 73, 0.6);
+}
+
+.contact-value,
+.contact-col a {
+  color: #263149;
+  transition: opacity 0.2s ease;
+}
+
+.contact-col a:hover {
+  opacity: 0.75;
+}
+
+/* Mobile Padding Fallbacks */
+@media screen and (max-width: 768px) {
+  .about-section-block {
+    padding: 25px 15px;
+  }
+}
+/* ==========================================
+   ADDITIONAL BLOG & SAFETY PAGE THEMING & CONTROLS
+   (Paste at bottom of existing styles.css)
+   ========================================== */
+
+/* Page Main Title Accent */
+.latest-container .page-main-title {
+  color: #263149;
+}
+
+/* Light Card Theme Rules */
+.card-light-themed {
+  background-color: #FFFFFF;
+  border-color: rgba(38, 49, 73, 0.2);
+  color: #263149;
+  box-shadow: 0 4px 15px rgba(38, 49, 73, 0.05);
+}
+
+.card-light-themed .article-title,
+.card-light-themed .article-body p,
+.card-light-themed .pr-link,
+.card-light-themed .article-action-link {
+  color: #263149;
+}
+
+.card-light-themed a:hover {
+  opacity: 0.75;
+}
+
+/* Dark Accent Card Theme Rules */
+.card-dark-themed {
+  background-color: #263149;
+  border-color: #263149;
+  color: #E5F7AF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-dark-themed .article-title,
+.card-dark-themed .article-body p,
+.card-dark-themed a {
+  color: #E5F7AF;
+}
+
+.card-dark-themed a:hover {
+  opacity: 0.85;
+}
+
+/* Image Frame Borders / Backdrops */
+.image-frame img {
+  border: 1px solid rgba(38, 49, 73, 0.1);
+}
+
+/* Mobile Responsive Adjustments for Cards */
+@media screen and (max-width: 768px) {
+  .latest-container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .article-card {
+    padding: 20px 15px;
+  }
+}
+/* ==========================================
+   BLOG PAGE - COLOR THEME & LOOK (ADDITION)
+   ========================================== */
+
+/* Dark text for card titles & body */
+.destination-card h3 {
+  color: #1a2536;
+}
+
+.destination-card p {
+  color: #2b384e;
+}
+
+/* "Read More" button link style */
+.read-more {
+  color: #1a2536;
+  transition: opacity 0.2s ease;
+}
+
+.read-more:hover {
+  opacity: 0.7;
+}
+
+/* Play button theme overlay */
+.play-button {
+  background-color: rgba(26, 37, 54, 0.75);
+  color: #ffffff;
+}
+
+.play-button:hover {
+  background-color: rgba(26, 37, 54, 0.9);
+}
+
+/* Primary Pill Button */
+.btn-pill {
+  background-color: #1a2536;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.btn-pill:hover {
+  background-color: #2c3e50;
+}
+
 /* ==========================================================================
    Blog Page Theme & Visual Styling Additions (Color, Fonts & Aesthetics)
    ========================================================================== */
