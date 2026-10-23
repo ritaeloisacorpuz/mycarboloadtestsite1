@@ -53,12 +53,14 @@
       text-align: center;
       padding: 20px 0;
     }
-    footer.site-footer .footer-brand-logo {
-      max-height: 60px;
-      width: auto;
-      margin-bottom: 10px;
-      display: inline-block;
-    }
+  footer.site-footer .footer-brand-logo {
+  width: 60px;               /* Ensures equal width & height to make a perfect circle */
+  height: 60px;
+  border-radius: 50%;        /* Curves the sharp edges into a circle */
+  object-fit: cover;         /* Keeps the image aspect ratio clean inside the circle */
+  margin-bottom: 10px;
+  display: inline-block;
+}
     footer.site-footer .footer-brand-center p {
       font-size: 1.05rem;
       letter-spacing: 1px;
